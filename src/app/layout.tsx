@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Afacad } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   description: "Personal portfolio and website for Ethan Chennault",
 };
 
+export const viewport: Viewport = {
+  initialScale: 1,
+  width: "device-width",
+  viewportFit: "cover",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,10 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${afacad.className} text-secondary antialiased bg-primary`}
+        className={`${afacad.className} text-secondary antialiased bg-primary max-w-full w-screen`}
       >
         <Navbar />
-        <div className="px-2 md:px-64 ">{children}</div>
+        <div className="px-2 md:px-64">{children}</div>
       </body>
     </html>
   );

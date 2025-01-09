@@ -13,7 +13,7 @@ const NavbavLink = ({
 }) => {
   return (
     <a
-      className={`py-2 px-6 rounded-md text-2xl hover:cursor-pointer group transition-all duration-300 ${className}`}
+      className={`py-2 rounded-md text-lg md:text-2xl hover:cursor-pointer group transition-all duration-300 ${className}`}
       href={href}
     >
       <div className="border-b border-b-transparent group-hover:border-b-accent transition-all duration-300">
@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`z-50 px-2 md:px-64 gap-x-8 text-lg flex justify-center bg-primary border-b items-center sticky top-0 w-full transition-all duration-300 ${
+      className={`z-50 px-2 md:px-64 gap-x-12 text-lg flex justify-center bg-primary border-b items-center sticky top-0 w-full transition-all duration-300 ${
         isScrolled
           ? "h-16 border-secondary shadow-navbar"
           : "h-24 border-transparent shadow-none"
