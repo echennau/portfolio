@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 ::selection {
-    @apply bg-accent/75
+    @apply bg-accent/75 text-white
 }
