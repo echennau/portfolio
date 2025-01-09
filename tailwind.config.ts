@@ -9,8 +9,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#222226",
+        secondary: "#fcf3ed",
+        accent: "#ed8a26",
+      },
+      boxShadow: {
+        navbar: "0px 0px 48px 24px rgba(255, 255, 255, 0.08)",
       },
     },
   },
