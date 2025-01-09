@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`px-2 md:px-32 gap-x-8 text-lg flex justify-center border-b items-center sticky top-0 w-full transition-all duration-300 ${
+      className={`px-2 md:px-64 gap-x-8 text-lg flex justify-center border-b items-center sticky top-0 w-full transition-all duration-300 ${
         isScrolled
           ? "h-16 border-secondary shadow-navbar"
           : "h-24 border-transparent shadow-none"
