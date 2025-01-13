@@ -31,7 +31,7 @@ export default function RootLayout({
         className={`${afacad.className} text-secondary antialiased bg-primary max-w-full w-screen`}
       >
         <Navbar />
-        <div className="px-2 md:px-64">{children}</div>
+        <div className="">{children}</div>
       </body>
     </html>
   );

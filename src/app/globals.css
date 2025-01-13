@@ -5,3 +5,8 @@
 ::selection {
     @apply bg-accent/75 text-white
 }
+
+@layer base {
+  :root {
+
+        --radius: 0.5rem}}

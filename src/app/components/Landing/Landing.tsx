@@ -4,7 +4,7 @@ import Blob from "./Blob";
 
 const Landing = () => {
   return (
-    <div className="flex flex-col xl:flex-row xl:justify-between justify-center xl:items-start items-center gap-y-16">
+    <div className="px-2 md:px-64 flex flex-col xl:flex-row xl:justify-between justify-center xl:items-start items-center gap-y-16">
       <div className="font-bold flex flex-col text-center xl:text-left bg-gradient-to-r from-white via-accent brightness-110 to-secondary bg-clip-text text-transparent">
         <span className="text-8xl md:text-9xl">Hello, </span>
         <span className="text-6xl md:text-8xl text-accent/25">
@@ -15,7 +15,7 @@ const Landing = () => {
         </span>
       </div>
 
-      <div className="flex relative flex-grow min-w-32 max-w-80 justify-center items-center">
+      <div className="shadow-glow flex relative flex-grow min-w-32 max-w-80 justify-center items-center">
         <div className="rounded-2xl p-8 flex justify-center items-center bg-secondary overflow-hidden">
           <Blob />
           <Image
