@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Afacad } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import ThemeProvider from "./contexts/ThemeContext";
 
 const afacad = Afacad({
   weight: ["400", "700"],
@@ -20,19 +21,34 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
+enum Theme {
+  LIGHT = "LIGHT",
+  DARK = "DARK",
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const initialTheme: Theme = Theme.LIGHT;
+  console.log(initialTheme);
+
+  const themeClass =
+    initialTheme === Theme.LIGHT
+      ? "text-primary bg-secondary"
+      : "text-secondary bg-primary";
+
   return (
     <html lang="en">
-      <body
-        className={`${afacad.className} text-secondary antialiased bg-primary max-w-full w-screen`}
-      >
-        <Navbar />
-        <div className="">{children}</div>
-      </body>
+      <ThemeProvider initialTheme={initialTheme}>
+        <body
+          className={`${afacad.className} ${themeClass} antialiased max-w-full w-screen`}
+        >
+          <Navbar />
+          <div className="">{children}</div>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

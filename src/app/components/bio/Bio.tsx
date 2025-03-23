@@ -13,7 +13,7 @@ import { FiGlobe } from "react-icons/fi";
 const Bio = () => {
   return (
     <div className="px-2">
-      <Card className="w-fit hover:scale-[103%] transition duration-500 mx-auto shadow-glow">
+      <Card className="w-fit hover:scale-[103%] transition duration-500 mx-auto shadow-glow rounded-xl">
         <CardHeader className="pb-2">
           <CardTitle className="flex justify-between">
             <span>Ethan Chennault</span>
@@ -33,19 +33,22 @@ const Bio = () => {
           <div className="flex flex-col gap-y-1 text-gray-400 underline text-left">
             <a
               href="https://www.linkedin.com/in/echennau/"
-              className="hover:cursor-pointer flex items-center"
+              className="hover:cursor-pointer flex items-center hover:text-gray-400/50 transition duration-300"
             >
               <FiLinkedin className="mr-2 text-gray-500 size-5" />
               LinkedIn
             </a>
             <a
               href="https://github.com/3than0ls"
-              className="hover:cursor-pointer flex items-center"
+              className="hover:cursor-pointer flex items-center hover:text-gray-400/50 transition duration-300"
             >
               <FiGithub className="mr-2 text-gray-500 size-5" />
               GitHub
             </a>
-            <a href="/" className="hover:cursor-pointer flex items-center">
+            <a
+              href="/"
+              className="hover:cursor-pointer flex items-center hover:text-gray-400/50 transition duration-300"
+            >
               <FiGlobe className="mr-2 text-gray-500 size-5" />
               Website
             </a>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { Theme, useTheme, useThemeClass } from "../contexts/ThemeContext";
 
 const NavbavLink = ({
   href,
@@ -39,13 +40,17 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const { theme } = useTheme();
+  const border =
+    theme === Theme.DARK ? "border-secondary shadow-glow" : "shadow-xl";
+
   return (
     <div
-      className={`z-50 px-2 md:px-64 gap-x-12 text-lg flex justify-center bg-primary border-b items-center sticky top-0 w-full transition-all duration-300 ${
-        isScrolled
-          ? "h-16 border-secondary shadow-glow"
-          : "h-24 border-transparent shadow-none"
-      }`}
+      className={`z-50 px-2 md:px-64 gap-x-12 text-lg flex justify-center border-b items-center sticky top-0 w-full transition-all duration-300 ${
+        isScrolled ? `h-16 ${border}` : "h-24 border-transparent shadow-none"
+      }
+       ${useThemeClass()}
+      `}
     >
       <NavbavLink href="#a">About</NavbavLink>
       <NavbavLink href="#a">Experience</NavbavLink>
