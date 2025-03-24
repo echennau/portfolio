@@ -5,9 +5,14 @@ import { useEffect, useState, useRef } from "react";
 type FadeInDivProps = {
   className?: string;
   children: React.ReactNode;
+  direction?: "right" | "left" | "up" | "down";
 };
 
-const FadeInDiv = ({ className, children }: FadeInDivProps) => {
+const FadeInDiv = ({
+  className,
+  children,
+  direction = "right",
+}: FadeInDivProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const textRef = useRef<HTMLDivElement>(null);
 
@@ -29,13 +34,29 @@ const FadeInDiv = ({ className, children }: FadeInDivProps) => {
     return () => observer.unobserve(element);
   }, []);
 
+  let directionClassName;
+  switch (direction) {
+    case "right":
+      directionClassName = "translate-x-10";
+      break;
+    case "left":
+      directionClassName = "-translate-x-10";
+      break;
+    case "up":
+      directionClassName = "translate-y-10";
+      break;
+    case "down":
+      directionClassName = "-translate-y-10";
+      break;
+  }
+
   return (
     <div
       ref={textRef}
       className={`opacity-0 transform transition ${
         isVisible
-          ? "opacity-100 translate-x-0 duration-1000"
-          : " translate-x-10 opacity-0 duration-0"
+          ? "opacity-100 translate-x-0 translate-y-0 duration-1000"
+          : `${directionClassName} opacity-0 duration-0`
       } ${className}`}
     >
       {children}

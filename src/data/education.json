@@ -1,0 +1,21 @@
+{
+    "education": [
+        {
+            "school": "University of California, Irvine",
+            "span": "XX-XXXX to XX-XXXX",
+            "imageURL": "/UCI.png",
+            "description": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac venenatis tortor."
+            ]
+        },
+        {
+            "school": "San Leandro High School",
+            "span": "XX-XXXX to XX-XXXX",
+            "imageURL": "/SLHS.png",
+            "description": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac venenatis tortor.",
+                "Curabitur ullamcorper convallis faucibus."
+            ]
+        }
+    ]
+}
