@@ -25,9 +25,11 @@ const Landing = () => {
         </span>
       </div>
 
-      <div className="flex relative flex-grow min-w-32 max-w-80 justify-center items-center">
-        <div className="shadow-2xl rounded-2xl p-8 flex justify-center items-center bg-secondary overflow-hidden">
+      <div className="flex relative flex-grow min-w-32 max-w-80 justify-center items-center overflow-visible">
+        <div className="absolute p-8 flex justify-center items-center overflow-visible">
           <Blob />
+        </div>
+        <div className="shadow-2xl rounded-2xl p-4 md:p-8 flex justify-center items-center bg-secondary w-full">
           <Image
             className="rounded-2xl min-w-64 shadow-glow "
             width={800}

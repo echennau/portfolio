@@ -1,0 +1,44 @@
+{
+    "projects": [
+        {
+            "link": "Project Link",
+            "image": "/landing.jpg",
+            "title": "Project Title 1",
+            "description": "Project Description",
+            "tags": [
+                "Project Tag 1",
+                "Project Tag 2"
+            ]
+        },
+        {
+            "link": "Project Link",
+            "image": "/landing.jpg",
+            "title": "Project Title 2",
+            "description": "Project Description",
+            "tags": [
+                "Project Tag 1",
+                "Project Tag 2"
+            ]
+        },
+        {
+            "link": "Project Link",
+            "image": "/landing.jpg",
+            "title": "Project Title 3",
+            "description": "Project Description",
+            "tags": [
+                "Project Tag 1",
+                "Project Tag 2"
+            ]
+        },
+        {
+            "link": "Project Link",
+            "image": "/landing.jpg",
+            "title": "Project Title 4",
+            "description": "Project Description",
+            "tags": [
+                "Project Tag 1",
+                "Project Tag 2"
+            ]
+        }
+    ]
+}

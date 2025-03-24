@@ -12,7 +12,7 @@ import { FiGlobe } from "react-icons/fi";
 
 const Bio = () => {
   return (
-    <div className="px-2">
+    <div className="px-4 overflow-scroll no-scrollbar">
       <Card className="w-fit hover:scale-[103%] transition duration-500 mx-auto shadow-glow rounded-xl">
         <CardHeader className="pb-2">
           <CardTitle className="flex justify-between">

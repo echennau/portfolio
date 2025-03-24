@@ -9,6 +9,13 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        "border-spin": {
+          "100%": {
+            transform: "rotate(-360deg)",
+          },
+        },
+      },
       colors: {
         primary: "#222226",
         secondary: "#fcf3ed",
@@ -21,6 +28,9 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      animation: {
+        "border-spin": "border-spin 7s linear infinite",
       },
     },
   },

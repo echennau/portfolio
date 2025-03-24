@@ -45,7 +45,7 @@ export default function RootLayout({
           className={`${afacad.className} ${themeClass} antialiased max-w-full w-screen`}
         >
           <Navbar />
-          <div className="">{children}</div>
+          <div className=" overflow-x-hidden">{children}</div>
         </body>
       </ThemeProvider>
     </html>

@@ -5,7 +5,9 @@ const Blob = () => {
   return (
     <>
       <svg
-        className="fill-accent/50 absolute -left-[12vw] -z-10 transform translate-y-12"
+        className="overflow-hidden fill-accent/50 absolute -z-10 transform translate-x-[7vw] translate-y-16"
+        width={750}
+        height={750}
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -15,7 +17,9 @@ const Blob = () => {
         />
       </svg>
       <svg
-        className="fill-accent/50 absolute -right-[5vw] -z-10 transform scale-150"
+        className="overflow-hidden fill-accent/50 absolute -left-[70vw] md:-left-[16vw] -z-10 transform -translate-y-10 scale-150"
+        width={350}
+        height={350}
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -25,7 +29,9 @@ const Blob = () => {
         />
       </svg>
       <svg
-        className="fill-accent/50 absolute -left-[13vw] -z-10 transform -translate-y-12 scale-50"
+        className="overflow-hidden fill-accent/50 absolute -left-[33vw] -z-10 transform -translate-y-24 scale-50"
+        width={400}
+        height={400}
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -35,7 +41,9 @@ const Blob = () => {
         />
       </svg>
       <svg
-        className="fill-accent/50 absolute -left-[50vw] -z-10 transform scale-[30%] -translate-y-10 "
+        className="overflow-hidden fill-accent/50 absolute -left-[50vw] -z-10 transform -translate-y-12"
+        width={400}
+        height={400}
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -45,7 +53,9 @@ const Blob = () => {
         />
       </svg>
       <svg
-        className="fill-accent/50 absolute -left-[40vw] -z-10 transform scale-[20%] translate-y-10"
+        className="overflow-hidden fill-accent/50 absolute -left-[40vw] -z-10 transform scale-[70%] translate-y-10"
+        width={400}
+        height={400}
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
       >
