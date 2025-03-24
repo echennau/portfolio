@@ -25,7 +25,6 @@ const ThemeContext = createContext<ThemeContextType>({
 const ThemeProvider = ({ initialTheme, children }: ThemeProviderProps) => {
   // see https://tailwindcss.com/docs/dark-mode (bottom of page)
   const [theme, setTheme] = useState<Theme>(initialTheme);
-  console.log(theme);
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
@@ -45,7 +44,6 @@ export const useTheme = (): ThemeContextType => {
  */
 export const useThemeClass = () => {
   const { theme } = useTheme()!;
-  console.log(theme);
   return theme === "LIGHT"
     ? "text-primary bg-secondary"
     : "text-secondary bg-primary";

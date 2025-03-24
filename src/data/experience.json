@@ -1,0 +1,34 @@
+{
+    "experience": [
+        {
+            "title": "Experience Title 1",
+            "company": "Company Name",
+            "span": "XX-XXXX to XX-XXXX",
+            "description": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac venenatis tortor.",
+                "Nullam non dui eu sapien auctor finibus non eleifend mauris. Vestibulum et bibendum lacus, at placerat est.",
+                "Curabitur ullamcorper convallis faucibus."
+            ]
+        },
+        {
+            "title": "Experience Title 2",
+            "company": "Company Name",
+            "span": "XX-XXXX to XX-XXXX",
+            "description": [
+                "line 1",
+                "line 2",
+                "line 3"
+            ]
+        },
+        {
+            "title": "Experience Title 3",
+            "company": "Company Name",
+            "span": "XX-XXXX to XX-XXXX",
+            "description": [
+                "line 1",
+                "line 2",
+                "line 3"
+            ]
+        }
+    ]
+}

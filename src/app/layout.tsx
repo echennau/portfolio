@@ -32,7 +32,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const initialTheme: Theme = Theme.LIGHT;
-  console.log(initialTheme);
 
   const themeClass =
     initialTheme === Theme.LIGHT
