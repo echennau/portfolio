@@ -29,7 +29,7 @@ const Landing = () => {
         <div className="absolute p-8 flex justify-center items-center overflow-visible">
           <Blob />
         </div>
-        <div className="shadow-2xl rounded-2xl p-4 md:p-8 flex justify-center items-center bg-secondary w-full">
+        <div className="shadow-2xl rounded-2xl p-4 md:p-8 flex justify-center items-center bg-white w-full">
           <Image
             className="rounded-2xl min-w-64 shadow-glow "
             width={800}

@@ -2,6 +2,7 @@ import Landing from "./components/landing/Landing";
 import Bio from "./components/bio/Bio";
 import Experience from "./components/experience/Experience";
 import Education from "./components/education/Education";
+import Projects from "./components/projects/Projects";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <Bio />
       <Experience />
       <Education />
-      {/* <Projects /> */}
+      <Projects />
     </div>
   );
 }

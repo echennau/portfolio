@@ -15,33 +15,35 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({ projectData }: ProjectCardProps) => {
+  const cardSizing =
+    "w-[310px] h-[300px] md:w-[420px] md:h-[360px] lg:w-[360px] lg:h-[320px] xl:w-[440px] xl:h-[400px] lg:my-2 xl:my-4";
+  // md:w-[420px] md:h-[300px] xl:w-[450px] xl:h-[350px] 2xl:w-[600px] 2xl:h-[420px]";
+
   return (
     <Link
       href={projectData.link}
-      className="hover:cursor-pointer hover:translate-y-2 transform transition duration-500 card-wrapper w-96 lg:w-[550px] h-[400px]"
+      className={`${cardSizing} group hover:cursor-pointer hover:translate-y-0.5 transform transition duration-500`}
     >
-      <Card className="card-content border-none p-0 overflow-hidden outline-none rounded-2xl">
-        <div className="">
-          <CardHeader className="p-0 h-64 overflow-hidden justify-center">
-            <Image
-              width={600}
-              height={350}
-              alt={projectData.title}
-              src={projectData.image}
-            />
-          </CardHeader>
-          <CardDescription className="flex flex-col p-4">
-            <span className="hover:cursor-pointer text-2xl font-bold text-black">
-              {projectData.title}
-            </span>
-            <span className="text-base">{projectData.description}</span>
-            <div className="w-full flex gap-2 mt-2">
-              {projectData.tags.map((tag) => (
-                <ProjectCardTag key={tag} name={tag} color={"#0f0"} />
-              ))}
-            </div>
-          </CardDescription>
-        </div>
+      <Card className="border-none p-0 overflow-hidden outline-none rounded-2xl h-full flex flex-col">
+        <CardHeader className="p-0 overflow-hidden justify-center flex-1 ">
+          <Image
+            width={600}
+            height={350}
+            alt={projectData.title}
+            src={projectData.image}
+          />
+        </CardHeader>
+        <CardDescription className="flex flex-col p-4">
+          <span className="text-2xl w-fit font-bold leading-none border-b-[1px] border-b-transparent group-hover:border-b-accent transition-all duration-300">
+            {projectData.title}
+          </span>
+          <span className="text-base">{projectData.description}</span>
+          <div className="w-full flex gap-2 mt-2">
+            {projectData.tags.map((tag) => (
+              <ProjectCardTag key={tag} name={tag} />
+            ))}
+          </div>
+        </CardDescription>
       </Card>
     </Link>
   );
