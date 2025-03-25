@@ -4,8 +4,8 @@ import ProjectCard from "./ProjectCard";
 import FadeInDiv from "../utils/FadeInDiv";
 
 const Projects = () => {
-  const projectCards = projects.projects.map((p) => (
-    <ProjectCard key={p.title} projectData={p} />
+  const projectCards = projects.projects.map((p, i) => (
+    <ProjectCard key={i} projectData={p} />
   ));
 
   return (

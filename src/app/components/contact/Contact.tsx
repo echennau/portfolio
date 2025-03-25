@@ -11,7 +11,9 @@ const Contact = () => {
       <FadeInDiv>
         <span className="text-6xl font-bold text-left">Contact</span>
       </FadeInDiv>
-      <ContactForm />
+      <FadeInDiv className="w-full">
+        <ContactForm />
+      </FadeInDiv>
     </div>
   );
 };

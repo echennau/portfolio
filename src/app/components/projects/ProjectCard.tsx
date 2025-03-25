@@ -6,6 +6,7 @@ import ProjectCardTag from "./ProjectCardTag";
 import Image from "next/image";
 import Link from "next/link";
 import { Theme, useTheme } from "@/app/contexts/ThemeContext";
+import FadeInDiv from "../utils/FadeInDiv";
 
 type ProjectCardProps = {
   projectData: {
@@ -25,36 +26,40 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
     useTheme().theme === Theme.DARK ? "text-secondary bg-black" : "bg-white";
 
   return (
-    <Link
-      href={projectData.link}
-      className={`${cardSizing} group hover:cursor-pointer hover:translate-y-0.5 transform transition duration-500`}
+    <FadeInDiv
+      className={
+        cardSizing +
+        " group hover:cursor-pointer hover:translate-y-0.5 transform transition duration-500"
+      }
     >
-      <Card
-        className={`${cardClass} border-none p-0 overflow-hidden outline-none rounded-2xl h-full flex flex-col`}
-      >
-        <CardHeader
-          className={`p-0 overflow-hidden justify-center flex-1 ${cardClass}`}
+      <Link href={projectData.link}>
+        <Card
+          className={`${cardClass} border-none p-0 overflow-hidden outline-none rounded-2xl h-full flex flex-col`}
         >
-          <Image
-            width={600}
-            height={350}
-            alt={projectData.title}
-            src={projectData.image}
-          />
-        </CardHeader>
-        <CardDescription className={`${cardClass} flex flex-col p-4`}>
-          <span className="text-2xl w-fit font-bold leading-none border-b-[1px] border-b-transparent group-hover:border-b-accent transition-all duration-300">
-            {projectData.title}
-          </span>
-          <span className="text-base">{projectData.description}</span>
-          <div className="w-full flex gap-2 mt-2">
-            {projectData.tags.map((tag) => (
-              <ProjectCardTag key={tag} name={tag} />
-            ))}
-          </div>
-        </CardDescription>
-      </Card>
-    </Link>
+          <CardHeader
+            className={`p-0 overflow-hidden justify-center flex-1 ${cardClass}`}
+          >
+            <Image
+              width={600}
+              height={350}
+              alt={projectData.title}
+              src={projectData.image}
+            />
+          </CardHeader>
+          <CardDescription className={`${cardClass} flex flex-col p-4`}>
+            <span className="text-2xl w-fit font-bold leading-none border-b-[1px] border-b-transparent group-hover:border-b-accent transition-all duration-300">
+              {projectData.title}
+            </span>
+            <span className="text-base">{projectData.description}</span>
+            <div className="w-full flex gap-2 mt-2">
+              {projectData.tags.map((tag) => (
+                <ProjectCardTag key={tag} name={tag} />
+              ))}
+            </div>
+          </CardDescription>
+        </Card>
+      </Link>
+    </FadeInDiv>
   );
 };
 

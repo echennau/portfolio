@@ -47,7 +47,7 @@ const ContactForm = () => {
       : "bg-secondary focus:outline focus:outline-secondary";
 
   return (
-    <Card className={`rounded-xl w-full ${cardClass} border-none`}>
+    <Card className={`rounded-xl w-full ${cardClass} border-none w-full`}>
       <CardHeader>
         <CardTitle>Leave a message</CardTitle>
         <CardDescription>I will respond as soon as possible!</CardDescription>
