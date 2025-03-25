@@ -1,8 +1,11 @@
+"use client";
+
 import { Card, CardDescription, CardHeader } from "@/components/ui/card";
 import React from "react";
 import ProjectCardTag from "./ProjectCardTag";
 import Image from "next/image";
 import Link from "next/link";
+import { Theme, useTheme } from "@/app/contexts/ThemeContext";
 
 type ProjectCardProps = {
   projectData: {
@@ -17,15 +20,21 @@ type ProjectCardProps = {
 const ProjectCard = ({ projectData }: ProjectCardProps) => {
   const cardSizing =
     "w-[310px] h-[300px] md:w-[420px] md:h-[360px] lg:w-[360px] lg:h-[320px] xl:w-[440px] xl:h-[400px] lg:my-2 xl:my-4";
-  // md:w-[420px] md:h-[300px] xl:w-[450px] xl:h-[350px] 2xl:w-[600px] 2xl:h-[420px]";
+
+  const cardClass =
+    useTheme().theme === Theme.DARK ? "text-secondary bg-black" : "bg-white";
 
   return (
     <Link
       href={projectData.link}
       className={`${cardSizing} group hover:cursor-pointer hover:translate-y-0.5 transform transition duration-500`}
     >
-      <Card className="border-none p-0 overflow-hidden outline-none rounded-2xl h-full flex flex-col">
-        <CardHeader className="p-0 overflow-hidden justify-center flex-1 ">
+      <Card
+        className={`${cardClass} border-none p-0 overflow-hidden outline-none rounded-2xl h-full flex flex-col`}
+      >
+        <CardHeader
+          className={`p-0 overflow-hidden justify-center flex-1 ${cardClass}`}
+        >
           <Image
             width={600}
             height={350}
@@ -33,7 +42,7 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
             src={projectData.image}
           />
         </CardHeader>
-        <CardDescription className="flex flex-col p-4">
+        <CardDescription className={`${cardClass} flex flex-col p-4`}>
           <span className="text-2xl w-fit font-bold leading-none border-b-[1px] border-b-transparent group-hover:border-b-accent transition-all duration-300">
             {projectData.title}
           </span>

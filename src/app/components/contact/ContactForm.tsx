@@ -36,11 +36,18 @@ const ContactForm = () => {
     // submit
   };
 
+  const cardClass =
+    useTheme().theme === Theme.DARK
+      ? "bg-black text-secondary"
+      : "bg-white text-primary";
+
   const inputClass =
-    useTheme().theme === Theme.DARK ? "bg-primary" : "bg-secondary";
+    useTheme().theme === Theme.DARK
+      ? "bg-primary focus:outline focus:outline-primary"
+      : "bg-secondary focus:outline focus:outline-secondary";
 
   return (
-    <Card className="rounded-xl w-full">
+    <Card className={`rounded-xl w-full ${cardClass} border-none`}>
       <CardHeader>
         <CardTitle>Leave a message</CardTitle>
         <CardDescription>I will respond as soon as possible!</CardDescription>

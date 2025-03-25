@@ -10,7 +10,7 @@ type ProjectCardTag = {
 const ProjectCardTag = ({ name }: ProjectCardTag) => {
   // TODO: make these interactive and search projects by tag
   const themeClass =
-    useTheme().theme === Theme.LIGHT ? "bg-secondary/60" : "bg-primary/60";
+    useTheme().theme === Theme.LIGHT ? "bg-secondary/60" : "bg-accent/50";
 
   return (
     <div
