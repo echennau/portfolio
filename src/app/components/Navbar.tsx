@@ -12,10 +12,21 @@ const NavbavLink = ({
   className?: string;
   children: React.ReactNode;
 }) => {
+  const onClick = () => {
+    const element = document.getElementById(href.slice(1));
+    if (element) {
+      const top = element.getBoundingClientRect().top + window.scrollY - 80;
+      console.log(top);
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+    window.history.pushState({}, "", href);
+  };
+
   return (
     <a
       className={`py-2 rounded-md text-lg md:text-2xl hover:cursor-pointer group transition-all duration-300 ${className}`}
-      href={href}
+      //   href={href}
+      onClick={onClick}
     >
       <div className="border-b border-b-transparent group-hover:border-b-accent transition-all duration-300">
         {children}
@@ -53,10 +64,10 @@ const Navbar = () => {
       `}
     >
       <NavbavLink href="#a">About</NavbavLink>
-      <NavbavLink href="#a">Experience</NavbavLink>
-      <NavbavLink href="#a">Projects</NavbavLink>
-      <NavbavLink href="#a">Skills</NavbavLink>
-      <NavbavLink className="ml-auto" href="#a">
+      <NavbavLink href="#experience">Experience</NavbavLink>
+      <NavbavLink href="#projects">Projects</NavbavLink>
+      {/* <NavbavLink href="#a">Skills</NavbavLink> */}
+      <NavbavLink className="ml-auto" href="#contact">
         Contact
       </NavbavLink>
     </div>

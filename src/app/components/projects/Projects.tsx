@@ -9,7 +9,10 @@ const Projects = () => {
   ));
 
   return (
-    <div className="px-2 sm:px-16 md:px-24 lg:px-32 xl:px-64 flex flex-wrap gap-6 flex-col items-center w-full">
+    <div
+      id="projects"
+      className="px-2 sm:px-16 md:px-24 lg:px-32 xl:px-64 flex flex-wrap gap-6 flex-col items-center w-full"
+    >
       <FadeInDiv>
         <span className="text-6xl font-bold text-center">Projects</span>
       </FadeInDiv>
