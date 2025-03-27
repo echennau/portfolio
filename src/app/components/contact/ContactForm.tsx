@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
-import { FiMail, FiVoicemail } from "react-icons/fi";
+import { FiMail } from "react-icons/fi";
 
 type FormFieldsType = {
   name?: string;

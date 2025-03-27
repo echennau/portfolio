@@ -5,6 +5,7 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
+import Link from "next/link";
 import React from "react";
 import { FiGithub } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
@@ -45,13 +46,13 @@ const Bio = () => {
               <FiGithub className="mr-2 text-gray-500 size-5" />
               GitHub
             </a>
-            <a
+            <Link
               href="/"
               className="hover:cursor-pointer flex items-center hover:text-gray-400/50 transition duration-300"
             >
               <FiGlobe className="mr-2 text-gray-500 size-5" />
               Website
-            </a>
+            </Link>
           </div>
         </CardContent>
       </Card>
