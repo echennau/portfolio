@@ -3,6 +3,7 @@ import { Afacad } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import ThemeProvider from "./contexts/ThemeContext";
+import Footer from "./components/Footer";
 
 const afacad = Afacad({
   weight: ["400", "700"],
@@ -45,7 +46,8 @@ export default function RootLayout({
           className={`${afacad.className} ${themeClass} antialiased max-w-full w-screen`}
         >
           <Navbar />
-          <div className=" overflow-x-hidden">{children}</div>
+          <div className="overflow-x-hidden">{children}</div>
+          <Footer />
         </body>
       </ThemeProvider>
     </html>

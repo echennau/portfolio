@@ -63,7 +63,7 @@ const Navbar = () => {
        ${useThemeClass()}
       `}
     >
-      <NavbavLink href="#a">About</NavbavLink>
+      {/* <NavbavLink href="#a">About</NavbavLink> */}
       <NavbavLink href="#experience">Experience</NavbavLink>
       <NavbavLink href="#projects">Projects</NavbavLink>
       {/* <NavbavLink href="#a">Skills</NavbavLink> */}

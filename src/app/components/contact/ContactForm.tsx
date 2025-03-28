@@ -107,7 +107,10 @@ const ContactForm = () => {
       <div className={`${sentClass} w-full h-full`}>
         <CardHeader>
           <CardTitle>Leave a message</CardTitle>
-          <CardDescription>I will respond as soon as possible!</CardDescription>
+          <CardDescription>
+            I will respond as soon as possible! Alternatively, email me directly
+            at <span className="font-bold">ethanolchennault@gmail.com</span>.
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <form className="flex flex-col gap-y-4" onSubmit={onSubmit}>
