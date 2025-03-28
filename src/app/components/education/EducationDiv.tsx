@@ -33,7 +33,7 @@ const EducationDiv = ({ educationData, index }: EducationDivProps) => {
       />
       <div className="flex-1 flex flex-col">
         <span className="font-bold text-3xl leading-none">{school}</span>
-        <span className="text-gray-400 mb-1">{span}</span>
+        <span className="text-gray-400 mt-0.5 mb-1">{span}</span>
         {description.map((line, i) => (
           <span className="text-lg leading-tight" key={i}>
             {line}
