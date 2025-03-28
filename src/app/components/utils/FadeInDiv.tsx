@@ -11,7 +11,7 @@ type FadeInDivProps = {
 const FadeInDiv = ({
   className,
   children,
-  direction = "right",
+  direction = "left",
 }: FadeInDivProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const textRef = useRef<HTMLDivElement>(null);

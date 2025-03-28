@@ -31,6 +31,7 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
         cardSizing +
         " group hover:cursor-pointer hover:translate-y-0.5 transform transition duration-500"
       }
+      direction="up"
     >
       <Link href={projectData.link}>
         <Card

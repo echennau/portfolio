@@ -12,7 +12,7 @@ const Education = () => {
 
   return (
     <div className="px-2 sm:px-16 md:px-24 lg:px-32 xl:px-64 flex flex-wrap gap-4 flex-col items-center w-full lg:items-end text-right">
-      <FadeInDiv>
+      <FadeInDiv direction="right">
         <span className="text-6xl font-bold">Education</span>
       </FadeInDiv>
       <div className="px-2 flex flex-col gap-y-8 w-full">{educationDivs}</div>

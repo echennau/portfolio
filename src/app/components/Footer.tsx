@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Theme, useTheme, useThemeClass } from "../contexts/ThemeContext";
+import { Theme, useTheme } from "../contexts/ThemeContext";
 import { FiLinkedin, FiGithub, FiGlobe } from "react-icons/fi";
 import Link from "next/link";
 

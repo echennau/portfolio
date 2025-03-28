@@ -2,7 +2,7 @@
     "projects": [
         {
             "link": "Project Link",
-            "image": "/landing.jpg",
+            "image": "/alanding.jpg",
             "title": "Project Title 1",
             "description": "Project Description",
             "tags": [
@@ -12,7 +12,7 @@
         },
         {
             "link": "Project Link",
-            "image": "/landing.jpg",
+            "image": "/alanding.jpg",
             "title": "Project Title 2",
             "description": "Project Description",
             "tags": [
@@ -22,7 +22,7 @@
         },
         {
             "link": "Project Link",
-            "image": "/landing.jpg",
+            "image": "/alanding.jpg",
             "title": "Project Title 3",
             "description": "Project Description",
             "tags": [
@@ -32,7 +32,7 @@
         },
         {
             "link": "Project Link",
-            "image": "/landing.jpg",
+            "image": "/alanding.jpg",
             "title": "Project Title 4",
             "description": "Project Description",
             "tags": [
