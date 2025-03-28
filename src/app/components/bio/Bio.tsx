@@ -26,10 +26,11 @@ const Bio = () => {
         </CardHeader>
         <CardContent className="flex gap-x-12 pt-0 text-base md:text-lg">
           <div className="w-[400px] md:w-[500px] leading-tight">
-            Experienced in frontend development, cloud infrastructure, SQL/NoSQL
-            databases, and scripting, looking to expand and apply my skillset in
-            the professional environment. Excited to meet new people and build
-            connections!
+            Hi, I&apos;m Ethan! I have a passion for web applications, and I
+            have experience in fullstack development, SQL/NoSQL databases, and
+            cloud infrastructure. I&apos;m looking to expand and apply my
+            skillset in the professional environment, and am excited to meet new
+            people.
           </div>
           <div className="flex flex-col gap-y-1 text-gray-400 underline text-left">
             <a

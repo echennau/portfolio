@@ -33,9 +33,16 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
       }
       direction="up"
     >
-      <Link href={projectData.link}>
+      <Link
+        href={projectData.link}
+        className={`rounded-2xl outline-offset-4 ${
+          useTheme().theme === Theme.DARK
+            ? "focus:outline-black"
+            : "focus:outline-white"
+        }`}
+      >
         <Card
-          className={`${cardClass} border-none p-0 overflow-hidden outline-none rounded-2xl h-full flex flex-col`}
+          className={`${cardClass} border-none p-0 overflow-hidden outline-none rounded-2xl h-full flex flex-col shadow-xl`}
         >
           <CardHeader
             className={`p-0 overflow-hidden justify-center flex-1 ${cardClass}`}
@@ -45,6 +52,7 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
               height={350}
               alt={projectData.title}
               src={projectData.image}
+              className=""
             />
           </CardHeader>
           <CardDescription className={`${cardClass} flex flex-col p-4`}>

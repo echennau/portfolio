@@ -1,13 +1,14 @@
 {
     "projects": [
         {
-            "link": "Project Link",
-            "image": "/alanding.jpg",
-            "title": "Project Title 1",
-            "description": "Project Description",
+            "link": "/portfolio",
+            "image": "/projects/portfolio/image.png",
+            "title": "Personal Website",
+            "description": "My own personal website - the one you are seeing now.",
             "tags": [
-                "Project Tag 1",
-                "Project Tag 2"
+                "React",
+                "TailwindCSS",
+                "Next.js"
             ]
         },
         {

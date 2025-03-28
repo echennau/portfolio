@@ -79,9 +79,10 @@ const ContactForm = () => {
   const sentClass = sent ? "brightness-75 pointer-events-none select-none" : "";
 
   const inputClass =
-    useTheme().theme === Theme.DARK
+    (sent ? "disabled " : "") +
+    (useTheme().theme === Theme.DARK
       ? "bg-primary focus:outline focus:outline-primary"
-      : "bg-secondary focus:outline focus:outline-secondary";
+      : "bg-secondary focus:outline focus:outline-secondary");
 
   return (
     <Card
@@ -181,8 +182,8 @@ const ContactForm = () => {
             </label>
             <input
               className={`w-full ${
-                sent ? "bg-gray-100" : "bg-accent"
-              } rounded-xl p-2 hover:cursor-pointer hover:bg-opacity-75 transition `}
+                sent ? "bg-gray-100 disabled" : "bg-accent"
+              } rounded-xl p-2 focus:outline-accent outline-offset-2 hover:cursor-pointer hover:bg-opacity-75 transition `}
               type="submit"
             />
           </form>
