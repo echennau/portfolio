@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext, createContext, useState } from "react";
+import React, { useContext, createContext, useState, useEffect } from "react";
 
 export enum Theme {
   LIGHT = "LIGHT",
@@ -8,13 +8,13 @@ export enum Theme {
 }
 
 type ThemeProviderProps = {
-  initialTheme: Theme;
+  initialTheme?: Theme;
   children: React.ReactNode;
 };
 
 type ThemeContextType = {
   theme: Theme | undefined;
-  setTheme: ((theme: Theme) => void) | undefined;
+  setTheme: React.Dispatch<React.SetStateAction<Theme>> | undefined;
 };
 
 const ThemeContext = createContext<ThemeContextType>({
@@ -23,13 +23,22 @@ const ThemeContext = createContext<ThemeContextType>({
 });
 
 const ThemeProvider = ({ initialTheme, children }: ThemeProviderProps) => {
-  // see https://tailwindcss.com/docs/dark-mode (bottom of page)
-  const [theme, _setTheme] = useState<Theme>(initialTheme);
+  const [theme, setTheme] = useState<Theme>(initialTheme ?? Theme.LIGHT);
 
-  const setTheme = (theme: Theme) => {
-    localStorage.setItem("theme", theme);
-    _setTheme(theme);
-  };
+  useEffect(() => {
+    const initialTheme: Theme =
+      (localStorage.getItem("theme") as Theme) ??
+      (window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? Theme.DARK
+        : Theme.LIGHT) ??
+      Theme.LIGHT;
+    setTheme(initialTheme);
+  }, []);
+
+  useEffect(() => {
+    if (theme) localStorage.setItem("theme", theme);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
