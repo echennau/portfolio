@@ -14,7 +14,7 @@ type ThemeProviderProps = {
 
 type ThemeContextType = {
   theme: Theme | undefined;
-  setTheme: React.Dispatch<React.SetStateAction<Theme>> | undefined;
+  setTheme: ((theme: Theme) => void) | undefined;
 };
 
 const ThemeContext = createContext<ThemeContextType>({
@@ -24,7 +24,13 @@ const ThemeContext = createContext<ThemeContextType>({
 
 const ThemeProvider = ({ initialTheme, children }: ThemeProviderProps) => {
   // see https://tailwindcss.com/docs/dark-mode (bottom of page)
-  const [theme, setTheme] = useState<Theme>(initialTheme);
+  const [theme, _setTheme] = useState<Theme>(initialTheme);
+
+  const setTheme = (theme: Theme) => {
+    localStorage.setItem("theme", theme);
+    _setTheme(theme);
+  };
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
@@ -44,9 +50,11 @@ export const useTheme = (): ThemeContextType => {
  */
 export const useThemeClass = () => {
   const { theme } = useTheme()!;
-  return theme === "LIGHT"
-    ? "text-primary bg-secondary"
-    : "text-secondary bg-primary";
+  return (
+    (theme === "LIGHT"
+      ? "text-primary bg-secondary"
+      : "text-secondary bg-primary") + " transition-color duration-300"
+  );
 };
 
 export default ThemeProvider;

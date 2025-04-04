@@ -14,7 +14,7 @@ const Landing = () => {
   return (
     <div className="px-2 md:px-64 flex flex-col xl:flex-row xl:justify-between justify-center xl:items-start items-center gap-y-16">
       <div
-        className={`font-bold flex flex-col text-center xl:text-left bg-gradient-to-r ${landingTextClass} bg-clip-text text-transparent`}
+        className={`font-bold flex flex-col text-center xl:text-left bg-gradient-to-r ${landingTextClass} bg-clip-text text-transparent z-20`}
       >
         <span className="text-8xl md:text-9xl">Hello, </span>
         <span className="text-6xl md:text-8xl text-accent/25">
@@ -29,7 +29,7 @@ const Landing = () => {
         <div className="absolute p-8 flex justify-center items-center overflow-visible">
           <Blob />
         </div>
-        <div className="shadow-2xl rounded-2xl p-4 md:p-8 flex justify-center items-center bg-white w-full">
+        <div className="shadow-2xl rounded-2xl p-4 md:p-8 flex justify-center items-center bg-white w-full z-20">
           <Image
             className="rounded-2xl min-w-64 shadow-glow "
             width={800}

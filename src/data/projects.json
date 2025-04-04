@@ -4,7 +4,7 @@
             "link": "/portfolio",
             "image": "/projects/portfolio/image.png",
             "title": "Personal Website",
-            "description": "My own personal website - the one you are seeing now.",
+            "description": "My own personal website — the one you are seeing now.",
             "tags": [
                 "React",
                 "TailwindCSS",

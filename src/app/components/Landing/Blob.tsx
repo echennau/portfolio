@@ -5,7 +5,7 @@ const Blob = () => {
   return (
     <>
       <svg
-        className="overflow-hidden fill-accent/50 absolute -z-10 transform translate-x-[7vw] translate-y-16"
+        className="overflow-hidden fill-accent/50 absolute z-0 transform translate-x-[15vw] sm:translate-x-[7vw] translate-y-16"
         width={750}
         height={750}
         viewBox="0 0 200 200"
@@ -17,7 +17,7 @@ const Blob = () => {
         />
       </svg>
       <svg
-        className="overflow-hidden fill-accent/50 absolute -left-[70vw] md:-left-[16vw] -z-10 transform -translate-y-10 scale-150"
+        className="overflow-hidden fill-accent/50 absolute -left-[200px] sm:-left-[16vw] z-0 transform -translate-y-10 scale-150"
         width={350}
         height={350}
         viewBox="0 0 200 200"
@@ -29,7 +29,7 @@ const Blob = () => {
         />
       </svg>
       <svg
-        className="overflow-hidden fill-accent/50 absolute -left-[33vw] -z-10 transform -translate-y-24 scale-50"
+        className="overflow-hidden fill-accent/50 absolute -left-[33vw] z-0 transform -translate-y-24 scale-50"
         width={400}
         height={400}
         viewBox="0 0 200 200"
@@ -41,7 +41,7 @@ const Blob = () => {
         />
       </svg>
       <svg
-        className="overflow-hidden fill-accent/50 absolute -left-[50vw] -z-10 transform -translate-y-12"
+        className="overflow-hidden fill-accent/50 absolute -left-[50vw] z-0 transform -translate-y-12"
         width={400}
         height={400}
         viewBox="0 0 200 200"
@@ -53,7 +53,7 @@ const Blob = () => {
         />
       </svg>
       <svg
-        className="overflow-hidden fill-accent/50 absolute -left-[40vw] -z-10 transform scale-[70%] translate-y-10"
+        className="overflow-hidden fill-accent/50 absolute -left-[40vw] z-0 transform scale-[70%] translate-y-10"
         width={400}
         height={400}
         viewBox="0 0 200 200"

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Theme, useTheme, useThemeClass } from "../contexts/ThemeContext";
+import ThemeSwitch from "./ThemeSwitch";
 
 const NavbavLink = ({
   href,
@@ -24,11 +25,11 @@ const NavbavLink = ({
 
   return (
     <a
-      className={`py-2 rounded-md text-lg md:text-2xl hover:cursor-pointer group transition-all duration-300 ${className}`}
+      className={`py-2 rounded-md text-lg md:text-2xl hover:cursor-pointer group ${className}`}
       //   href={href}
       onClick={onClick}
     >
-      <div className="border-b border-b-transparent group-hover:border-b-accent transition-all duration-300">
+      <div className="border-b border-b-transparent group-hover:border-b-accent transition-colors duration-300">
         {children}
       </div>
     </a>
@@ -57,7 +58,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`overflow-x-auto px-4 z-50 sm:px-16 lg:px-32 xl:px-64 gap-x-12 text-lg flex justify-center border-b items-center sticky top-0 w-full transition-all duration-300 ${
+      className={`overflow-x-auto px-4 z-50 sm:px-16 lg:px-32 xl:px-64 gap-x-12 text-lg flex justify-center border-b items-center sticky top-0 w-full transition- duration-300 ${
         isScrolled ? `h-16 ${border}` : "h-24 border-transparent shadow-none"
       }
        ${useThemeClass()}
@@ -67,6 +68,7 @@ const Navbar = () => {
       <NavbavLink href="#experience">Experience</NavbavLink>
       <NavbavLink href="#projects">Projects</NavbavLink>
       {/* <NavbavLink href="#a">Skills</NavbavLink> */}
+      <ThemeSwitch />
       <NavbavLink className="ml-auto" href="#contact">
         Contact
       </NavbavLink>
