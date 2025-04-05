@@ -1,6 +1,6 @@
 import React from "react";
 import FadeInDiv from "../utils/FadeInDiv";
-import education from "../../../data/education.json";
+import education from "../../data/education.json";
 import EducationDiv from "./EducationDiv";
 
 const Education = () => {

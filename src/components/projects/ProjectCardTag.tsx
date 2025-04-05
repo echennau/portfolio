@@ -1,6 +1,6 @@
 "use client";
 
-import { Theme, useTheme } from "@/app/contexts/ThemeContext";
+import { Theme, useTheme } from "@/contexts/ThemeContext";
 import React from "react";
 
 type ProjectCardTag = {

@@ -1,6 +1,6 @@
 import React from "react";
 import FadeInDiv from "../utils/FadeInDiv";
-import experience from "../../../data/experience.json";
+import experience from "../../data/experience.json";
 import ExperienceDiv from "./ExperienceDiv";
 
 const Experience = () => {

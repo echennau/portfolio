@@ -5,7 +5,7 @@ import React from "react";
 import ProjectCardTag from "./ProjectCardTag";
 import Image from "next/image";
 import Link from "next/link";
-import { Theme, useTheme } from "@/app/contexts/ThemeContext";
+import { Theme, useTheme } from "@/contexts/ThemeContext";
 import FadeInDiv from "../utils/FadeInDiv";
 
 type ProjectCardProps = {

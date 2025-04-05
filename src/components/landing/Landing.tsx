@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import Blob from "./Blob";
-import { Theme, useTheme } from "@/app/contexts/ThemeContext";
+import { Theme, useTheme } from "@/contexts/ThemeContext";
 
 const Landing = () => {
   const landingTextClass =

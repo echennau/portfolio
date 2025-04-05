@@ -1,6 +1,6 @@
 "use client";
 
-import { Theme, useTheme, useThemeClass } from "@/app/contexts/ThemeContext";
+import { Theme, useTheme, useThemeClass } from "@/contexts/ThemeContext";
 import {
   Card,
   CardContent,

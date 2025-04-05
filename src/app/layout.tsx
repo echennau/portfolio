@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Afacad } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import ThemeProvider from "./contexts/ThemeContext";
-import Footer from "./components/Footer";
+import Navbar from "../components/Navbar";
+import ThemeProvider from "../contexts/ThemeContext";
+import Footer from "../components/Footer";
 
 const afacad = Afacad({
   weight: ["400", "700"],

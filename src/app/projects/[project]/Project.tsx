@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
-import { Theme, useTheme, useThemeClass } from "@/app/contexts/ThemeContext";
+import { Theme, useTheme, useThemeClass } from "@/contexts/ThemeContext";
 import Markdown from "react-markdown";
 
 import projects from "../../../data/projects.json";
