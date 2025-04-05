@@ -13,21 +13,28 @@ const NavbavLink = ({
   className?: string;
   children: React.ReactNode;
 }) => {
-  const onClick = () => {
-    const element = document.getElementById(href.slice(1));
+  const scrollTo = () => {
+    const element = document.getElementById(href.split("#")[1]);
     if (element) {
       const top = element.getBoundingClientRect().top + window.scrollY - 80;
-      console.log(top);
       window.scrollTo({ top, behavior: "smooth" });
     }
     window.history.pushState({}, "", href);
   };
 
+  const onClick = () => {
+    if (window.location.pathname !== "/") {
+      window.location.href = href;
+    } else {
+      scrollTo();
+    }
+  };
+
   return (
     <a
       className={`py-2 rounded-md text-lg md:text-2xl hover:cursor-pointer group ${className}`}
-      //   href={href}
-      onClick={onClick}
+      href={href}
+      //   onClick={onClick}
     >
       <div className="border-b border-b-transparent group-hover:border-b-accent transition-colors duration-300">
         {children}
@@ -65,11 +72,11 @@ const Navbar = () => {
       `}
     >
       {/* <NavbavLink href="#a">About</NavbavLink> */}
-      <NavbavLink href="#experience">Experience</NavbavLink>
-      <NavbavLink href="#projects">Projects</NavbavLink>
+      <NavbavLink href="/#experience">Experience</NavbavLink>
+      <NavbavLink href="/#projects">Projects</NavbavLink>
       {/* <NavbavLink href="#a">Skills</NavbavLink> */}
       <ThemeSwitch />
-      <NavbavLink className="ml-auto" href="#contact">
+      <NavbavLink className="ml-auto" href="/#contact">
         Contact
       </NavbavLink>
     </div>

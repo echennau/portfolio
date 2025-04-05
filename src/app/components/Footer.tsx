@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <div
-      className={`${footerClass} shadow-2xl w-full py-8  px-2 sm:px-16 lg:px-32 xl:px-64 flex justify-between`}
+      className={`${footerClass} mt-auto shadow-2xl w-full py-8  px-2 sm:px-16 lg:px-32 xl:px-64 flex justify-between`}
     >
       <div>ethanolchennault@gmail.com</div>
       <div className="flex justify-end gap-x-2 md:gap-x-8 underline text-gray-400">

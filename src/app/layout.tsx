@@ -30,10 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head></head>
-      <body className={`${afacad.className} antialiased max-w-full w-screen`}>
+      <body
+        className={`${afacad.className} flex flex-col antialiased max-w-full min-h-screen w-screen`}
+      >
         <ThemeProvider>
           <Navbar />
-          <div className="overflow-x-hidden">{children}</div>
+          <div className="overflow-x-hidden flex-grow flex flex-col">
+            {children}
+          </div>
           <Footer />
         </ThemeProvider>
       </body>
