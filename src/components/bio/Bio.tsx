@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import React from "react";
-import { FiGithub } from "react-icons/fi";
+import { FiFile, FiGithub } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
 import { FiGlobe } from "react-icons/fi";
 
@@ -48,11 +48,12 @@ const Bio = () => {
               GitHub
             </a>
             <Link
-              href="/"
+              href="/data/echennau_tech_resume-04062025.pdf"
+              target="_blank"
               className="hover:cursor-pointer flex items-center hover:text-gray-400/50 transition duration-300"
             >
-              <FiGlobe className="mr-2 text-gray-500 size-5" />
-              Website
+              <FiFile className="mr-2 text-gray-500 size-5" />
+              Resume
             </Link>
           </div>
         </CardContent>
