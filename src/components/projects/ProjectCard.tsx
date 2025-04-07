@@ -60,7 +60,7 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
               {projectData.title}
             </span>
             <span className="text-base">{projectData.description}</span>
-            <div className="w-full flex gap-2 mt-2">
+            <div className="w-full flex flex-wrap gap-2 mt-2">
               {projectData.tags.map((tag) => (
                 <ProjectCardTag key={tag} name={tag} />
               ))}

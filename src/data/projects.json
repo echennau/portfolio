@@ -1,18 +1,6 @@
 {
     "projects": [
         {
-            "link": "/projects/portfolio",
-            "image": "/data/projects/portfolio/image.png",
-            "title": "Personal Website",
-            "description": "My own personal website — the one you are seeing now.",
-            "tags": [
-                "React",
-                "Typescript",
-                "TailwindCSS",
-                "Next.js"
-            ]
-        },
-        {
             "link": "/projects/sense",
             "image": "/data/projects/sense/image.png",
             "title": "Sense",
@@ -23,8 +11,31 @@
                 "TailwindCSS",
                 "Remix",
                 "Prisma",
+                "Supabase"
+            ]
+        },
+        {
+            "link": "/projects/redrawer",
+            "image": "/data/projects/redrawer/image.png",
+            "title": "Redrawer",
+            "description": "Image processing and recreation tool, redrawing on Microsoft Paint.",
+            "tags": [
+                "Python",
+                "Data Structures and Algorithms",
+                "Pillow"
+            ]
+        },
+        {
+            "link": "/projects/facets",
+            "image": "/data/projects/facets/image.png",
+            "title": "Facets-Next",
+            "description": "Chat and stickyboard website.",
+            "tags": [
+                "React",
+                "Typescript",
                 "Supabase",
-                "Zod"
+                "Prisma",
+                "TailwindCSS"
             ]
         },
         {
@@ -49,14 +60,15 @@
             ]
         },
         {
-            "link": "/projects/redrawer",
-            "image": "/data/projects/redrawer/image.png",
-            "title": "Redrawer",
-            "description": "Image processing and recreation tool, redrawing on Microsoft Paint.",
+            "link": "/projects/portfolio",
+            "image": "/data/projects/portfolio/image.png",
+            "title": "Personal Website",
+            "description": "My own personal website — the one you are seeing now.",
             "tags": [
-                "Python",
-                "Data Structures and Algorithms",
-                "Pillow"
+                "React",
+                "Typescript",
+                "TailwindCSS",
+                "Next.js"
             ]
         },
         {
@@ -79,19 +91,6 @@
             "tags": [
                 "Python",
                 "Tkinter"
-            ]
-        },
-        {
-            "link": "/projects/facets",
-            "image": "/data/projects/facets/image.png",
-            "title": "Facets-Next",
-            "description": "Chat and stickyboard website.",
-            "tags": [
-                "React",
-                "Typescript",
-                "Supabase",
-                "Prisma",
-                "TailwindCSS"
             ]
         }
     ]

@@ -29,13 +29,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head></head>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body
         className={`${afacad.className} flex flex-col antialiased max-w-full min-h-screen w-screen`}
       >
         <ThemeProvider>
           <Navbar />
-          <div className="overflow-x-hidden flex-grow flex flex-col">
+          <div className="overflow-hidden flex-grow flex flex-col">
             {children}
           </div>
           <Footer />
