@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { Theme, useTheme, useThemeClass } from "../contexts/ThemeContext";
 import ThemeSwitch from "./ThemeSwitch";
 import Link from "next/link";
-import Image from "next/image";
 import Logo from "./logo/Logo";
 
 const NavbavLink = ({
@@ -16,23 +15,6 @@ const NavbavLink = ({
   className?: string;
   children: React.ReactNode;
 }) => {
-  const scrollTo = () => {
-    const element = document.getElementById(href.split("#")[1]);
-    if (element) {
-      const top = element.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top, behavior: "smooth" });
-    }
-    window.history.pushState({}, "", href);
-  };
-
-  const onClick = () => {
-    if (window.location.pathname !== "/") {
-      window.location.href = href;
-    } else {
-      scrollTo();
-    }
-  };
-
   return (
     <a
       className={`py-2 rounded-md text-lg md:text-2xl hover:cursor-pointer group ${className}`}

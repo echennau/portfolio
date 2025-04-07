@@ -9,7 +9,6 @@ import Link from "next/link";
 import React from "react";
 import { FiFile, FiGithub } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
-import { FiGlobe } from "react-icons/fi";
 
 const Bio = () => {
   return (

@@ -1,21 +1,9 @@
 "use client";
 
-import { Theme, useTheme, useThemeClass } from "@/contexts/ThemeContext";
-import Image from "next/image";
+import { Theme, useTheme } from "@/contexts/ThemeContext";
 import React from "react";
 import LogoE from "./LogoE";
 import LogoC from "./LogoC";
-
-const keyframes = `
-@keyframes slideRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(85%);
-  }
-}
-`;
 
 const Logo = () => {
   const fillColor =

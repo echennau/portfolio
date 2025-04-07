@@ -5,11 +5,8 @@ import { redirect } from "next/navigation";
 import Project from "./Project";
 import projects from "../../../data/projects.json";
 
-export default async function ProjectPage({
-  params,
-}: {
-  params: { project: string };
-}) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function ProjectPage({ params }: { params: any }) {
   const { project } = await params;
 
   const filePath = path.join(
