@@ -2,43 +2,96 @@
     "projects": [
         {
             "link": "/projects/portfolio",
-            "image": "/projects/portfolio/image.png",
+            "image": "/data/projects/portfolio/image.png",
             "title": "Personal Website",
             "description": "My own personal website — the one you are seeing now.",
             "tags": [
                 "React",
+                "Typescript",
                 "TailwindCSS",
                 "Next.js"
             ]
         },
         {
-            "link": "Project Link",
-            "image": "/alanding.jpg",
-            "title": "Project Title 2",
-            "description": "Project Description",
+            "link": "/projects/sense",
+            "image": "/data/projects/sense/image.png",
+            "title": "Sense",
+            "description": "Personal budgeting and finance app.",
             "tags": [
-                "Project Tag 1",
-                "Project Tag 2"
+                "React",
+                "Typescript",
+                "TailwindCSS",
+                "Remix",
+                "Prisma",
+                "Supabase",
+                "Zod"
             ]
         },
         {
-            "link": "Project Link",
-            "image": "/alanding.jpg",
-            "title": "Project Title 3",
-            "description": "Project Description",
+            "link": "/projects/terrain-gen",
+            "image": "/data/projects/terrain-gen/image.png",
+            "title": "Terrain Generator",
+            "description": "Terrain generation using the diamond-square algorithm.",
             "tags": [
-                "Project Tag 1",
-                "Project Tag 2"
+                "Python",
+                "Data Structures and Algorithms",
+                "Poetry"
             ]
         },
         {
-            "link": "Project Link",
-            "image": "/alanding.jpg",
-            "title": "Project Title 4",
-            "description": "Project Description",
+            "link": "/projects/skiplist",
+            "image": "/data/projects/skiplist/image.png",
+            "title": "Skiplist Visualizer",
+            "description": "Interactive visualization tool for the skiplist data structure.",
             "tags": [
-                "Project Tag 1",
-                "Project Tag 2"
+                "Typescript",
+                "Data Structures and Algorithms"
+            ]
+        },
+        {
+            "link": "/projects/redrawer",
+            "image": "/data/projects/redrawer/image.png",
+            "title": "Redrawer",
+            "description": "Image processing and recreation tool, redrawing on Microsoft Paint.",
+            "tags": [
+                "Python",
+                "Data Structures and Algorithms",
+                "Pillow"
+            ]
+        },
+        {
+            "link": "/projects/genotypic",
+            "image": "/data/projects/genotypic/image.png",
+            "title": "Genotypic",
+            "description": "Mendelian genetics offspring genotype calculator.",
+            "tags": [
+                "React",
+                "Javascript",
+                "TailwindCSS",
+                "Next.js"
+            ]
+        },
+        {
+            "link": "/projects/pyadskipper",
+            "image": "/data/projects/pyadskipper/image.png",
+            "title": "PyAdSkipper",
+            "description": "Python script to skip Spotify advertisements.",
+            "tags": [
+                "Python",
+                "Tkinter"
+            ]
+        },
+        {
+            "link": "/projects/facets",
+            "image": "/data/projects/facets/image.png",
+            "title": "Facets-Next",
+            "description": "Chat and stickyboard website.",
+            "tags": [
+                "React",
+                "Typescript",
+                "Supabase",
+                "Prisma",
+                "TailwindCSS"
             ]
         }
     ]

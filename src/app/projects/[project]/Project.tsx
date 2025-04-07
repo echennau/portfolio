@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import React from "react";
 import Image from "next/image";
 import { Theme, useTheme, useThemeClass } from "@/contexts/ThemeContext";
 import Markdown from "react-markdown";
@@ -66,9 +65,21 @@ function Project({ mdFileText, project }: ProjectProps) {
                 {children}
               </a>
             ),
-            img: ({ src, alt }) => (
-              <Image src={src!} alt={alt!} className="mb-2" />
-            ),
+            // img: (x) => {
+            //   console.log(x);
+            //   const { src, alt } = x;
+            //   return (
+            //     <img
+            //       src={
+            //         "https://github.com/3than0ls/terrain-gen/blob/master/assets/sample.png"
+            //       }
+            //       alt={alt!}
+            //       width={500}
+            //       height={500}
+            //     />
+            //   );
+            //   return;
+            // },
             code: ({ children }) => (
               <code className="bg-gray-100 p-2 rounded">{children}</code>
             ),

@@ -52,7 +52,7 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
               height={350}
               alt={projectData.title}
               src={projectData.image}
-              className=""
+              className="object-cover h-full w-full"
             />
           </CardHeader>
           <CardDescription className={`${cardClass} flex flex-col p-4`}>
