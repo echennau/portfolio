@@ -22,7 +22,7 @@ const Logo = () => {
     useTheme().theme === Theme.DARK ? "fill-secondary" : "fill-primary";
 
   return (
-    <div className={`group relative size-[22px]`}>
+    <div className={`group relative size-[22px] mx-[11px]`}>
       <style>
         {`
           @keyframes slideRight {
@@ -34,7 +34,7 @@ const Logo = () => {
             }
           }
           .animate-slideRight {
-            animation: slideRight 1s ease 1s forwards;
+            animation: slideRight 1s ease 0.25s forwards;
           }
             
           @keyframes slideLeft {
@@ -46,15 +46,15 @@ const Logo = () => {
             }
           }
           .animate-slideLeft {
-            animation: slideLeft 1s ease 1s forwards;
+            animation: slideLeft 1s ease 0.25s forwards;
           }
         `}
       </style>
       <LogoE
-        className={`absolute ${fillColor} transition-all duration-1000 animate-slideLeft inset-0 group-hover:-top-[5px] group-hover:fill-accent`}
+        className={`absolute ${fillColor} transition-all duration-500 animate-slideLeft inset-0 group-hover:-top-[5px] group-hover:fill-accent`}
       />
       <LogoC
-        className={`absolute ${fillColor} transition-all duration-1000 animate-slideRight inset-0 group-hover:top-[5px] group-hover:fill-accent`}
+        className={`absolute ${fillColor} transition-all duration-500 animate-slideRight inset-0 group-hover:top-[5px] group-hover:fill-accent`}
       />
     </div>
   );
