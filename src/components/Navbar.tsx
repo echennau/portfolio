@@ -3,6 +3,9 @@
 import React, { useEffect, useState } from "react";
 import { Theme, useTheme, useThemeClass } from "../contexts/ThemeContext";
 import ThemeSwitch from "./ThemeSwitch";
+import Link from "next/link";
+import Image from "next/image";
+import Logo from "./logo/Logo";
 
 const NavbavLink = ({
   href,
@@ -72,6 +75,9 @@ const Navbar = () => {
       `}
     >
       {/* <NavbavLink href="#a">About</NavbavLink> */}
+      <Link href="/" className="flex items-center justify-center">
+        <Logo />
+      </Link>
       <NavbavLink href="/#experience">Experience</NavbavLink>
       <NavbavLink href="/#projects">Projects</NavbavLink>
       {/* <NavbavLink href="#a">Skills</NavbavLink> */}
