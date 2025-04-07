@@ -1,33 +1,36 @@
 {
     "experience": [
         {
-            "title": "Experience Title 1",
-            "company": "Company Name",
-            "span": "XX-XXXX to XX-XXXX",
+            "title": "Research Assistant",
+            "company": "University of California, Irvine",
+            "span": "09-2024 to Present",
             "description": [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac venenatis tortor.",
-                "Nullam non dui eu sapien auctor finibus non eleifend mauris. Vestibulum et bibendum lacus, at placerat est.",
-                "Curabitur ullamcorper convallis faucibus."
+                "Parallelized BLANT (Basic Local Aligment of Network Topology), increasing speed up to 10x based on available processors.",
+                "Optimized the Makefile for BLANT, reducing build time by 20 percent.",
+                "Utilized React and Express in the development of web applications and interfaces for research projects."
             ]
         },
         {
-            "title": "Experience Title 2",
-            "company": "Company Name",
-            "span": "XX-XXXX to XX-XXXX",
+            "title": "Summer Technology Intern",
+            "company": "Alameda County Information and Technologies Department",
+            "span": "05-2022 to 08-2022",
             "description": [
-                "line 1",
-                "line 2",
-                "line 3"
+                "Configured and repaired private networking systems that included switches, firewalls and routers, allowing for faster communications and network connection in three new buildings. ",
+                "Deployed Virtual Machines utilizing vSphere for virtual work access to increase productivity.",
+                "Investigated and eliminated cybersecurity intrusions utilizing CrowdStrike.",
+                "Uninstalled and disk wiped nonessential servers in the Oakland data center, optimizing the network.",
+                "Met with clients to determine network requirements for a new office building."
             ]
         },
         {
-            "title": "Experience Title 3",
-            "company": "Company Name",
-            "span": "XX-XXXX to XX-XXXX",
+            "title": "Engineering Intern",
+            "company": "Hewlett Packard Enterprise",
+            "span": "04-2021 to 08-2021",
             "description": [
-                "line 1",
-                "line 2",
-                "line 3"
+                "Developed and optimized a Python command-line script, increasing developer querying speed of real HPE customer servers by 70 percent.",
+                "Created full coverage software tests to ensure code quality across Windows and Linux operating systems.",
+                "Utilized Git and GitHub to track commits, changes, and monitor test cases.",
+                "Gained insight on server array traffic, data management, and server array software."
             ]
         }
     ]

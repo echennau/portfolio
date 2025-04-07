@@ -2,19 +2,21 @@
     "education": [
         {
             "school": "University of California, Irvine",
-            "span": "XX-XXXX to XX-XXXX",
+            "span": "09-2023 to Present",
             "imageURL": "/education/UCI.png",
             "description": [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac venenatis tortor."
+                "Double Majoring in Computer Science (B.S.) and Business Information Management (B.S.)",
+                "GPA: 3.8/4.0, Dean's Honor List",
+                "Relevant classes: Data Structure Implementation and Analysis, Design and Analysis of Algorithms"
             ]
         },
         {
             "school": "San Leandro High School",
-            "span": "XX-XXXX to XX-XXXX",
+            "span": "08-2019 to 06-2023",
             "imageURL": "/education/SLHS.png",
             "description": [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac venenatis tortor.",
-                "Curabitur ullamcorper convallis faucibus."
+                "GPA: 4.0, Honor Roll",
+                "Relevant classes: AP Computer Science Principles, AP Computer Science A (Java)"
             ]
         }
     ]
