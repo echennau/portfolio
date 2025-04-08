@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Afacad } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import ThemeProvider from "../contexts/ThemeContext";
@@ -42,6 +43,7 @@ export default function RootLayout({
           </div>
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

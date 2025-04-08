@@ -25,7 +25,7 @@ function Project({ mdFileText, project }: ProjectProps) {
       className={`${themeClass} px-2 sm:px-16 md:px-24 lg:px-32 xl:px-64 flex flex-col items-center flex-1 gap-y-8 py-8`}
     >
       <div
-        className={`shadow-2xl rounded-2xl w-fit h-fit p-4 md:p-8 flex justify-center items-center bg-white z-20`}
+        className={`shadow-2xl rounded-2xl w-fit h-fit min-w-96 min-h-96 p-4 md:p-8 transition flex justify-center items-center bg-white z-20`}
       >
         <Image
           src={project.image}
