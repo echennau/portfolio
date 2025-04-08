@@ -12,9 +12,39 @@ const afacad = Afacad({
   subsets: ["latin"],
 });
 
+console.assert(process.env.MAIN_URL);
 export const metadata: Metadata = {
-  title: "Ethan Chennault",
-  description: "Personal portfolio and website for Ethan Chennault",
+  metadataBase: new URL(process.env.MAIN_URL!),
+  title: "Ethan Chennault | Portfolio",
+  description:
+    "Explore the portfolio of Ethan Chennault - student at UCI and full-stack developer.",
+  keywords: [
+    "echennau",
+    "Ethan Chennault",
+    "Chennault",
+    "Portfolio",
+    "Personal Website",
+    "Next.js",
+    "TypeScript",
+    "TailwindCSS",
+    "Python",
+  ],
+  openGraph: {
+    title: "Ethan Chennault | Computer Science Student @ UCI",
+    description:
+      "Explore the portfolio of Ethan Chennault - student at UCI and full-stack developer.",
+    url: process.env.MAIN_URL,
+    siteName: "Ethan Chennault's Portfolio",
+    images: [
+      {
+        url: "/og_image.png", // ensure this image is optimized
+        width: 900,
+        height: 900,
+        alt: "Ethan Chennault Portfolio",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export const viewport: Viewport = {
@@ -28,10 +58,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Ethan Chennault",
+    url: process.env.BASE_URL,
+    image: `${process.env.BASE_URL}/og-image.png`,
+    sameAs: ["https://github.com/3than0ls", "https://linkedin.com/in/echennau"],
+    jobTitle: "CS Student at UCI",
+  };
+
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body
         className={`${afacad.className} flex flex-col antialiased max-w-full min-h-screen w-screen`}
