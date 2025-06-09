@@ -5,7 +5,7 @@
             "company": "University of California, Irvine",
             "span": "09-2024 to Present",
             "description": [
-                "Parallelized BLANT (Basic Local Aligment of Network Topology), increasing speed up to 10x based on available processors.",
+                "Implemented multithreading for BLANT, allowing an up to 16 times increase in run time via parallelism.",
                 "Optimized the Makefile for BLANT, reducing build time by 20 percent.",
                 "Utilized React and Express in the development of web applications and interfaces for research projects."
             ]

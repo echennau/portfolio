@@ -92,6 +92,17 @@
                 "Python",
                 "Tkinter"
             ]
+        },
+        {
+            "link": "/projects/search_engine",
+            "image": "/data/projects/search_engine/image.png",
+            "title": "Search Engine",
+            "description": "Search Engine for my Information Retrieval Class.",
+            "tags": [
+                "Python",
+                "NLTK",
+                "Data Structures and Algorithms"
+            ]
         }
     ]
 }
