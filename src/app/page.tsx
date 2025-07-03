@@ -7,6 +7,7 @@ import Education from "../components/education/Education";
 import Projects from "../components/projects/Projects";
 import Contact from "../components/contact/Contact";
 import { useThemeClass } from "../contexts/ThemeContext";
+import Divider from "@/components/Divider";
 
 export default function Home() {
   return (
@@ -16,8 +17,11 @@ export default function Home() {
       <Landing />
       <Bio />
       <Experience />
+      <Divider />
       <Education />
+      <Divider />
       <Projects />
+      <Divider />
       <Contact />
     </div>
   );
