@@ -20,7 +20,7 @@ const ExperienceDiv = ({ experienceData }: ExperienceDivProps) => {
         <span className="text-gray-400 mb-0.5 sm:mb-0 sm:mt-2.5">{span}</span>
       </div>
       <span>{company}</span>
-      <ul className="text-xl mt-1 list-disc list-inside leading-snug">
+      <ul className="text-xl mt-1 list-disc list-outside pl-6 leading-snug">
         {description.map((line, i) => (
           <li key={i}>{line}</li>
         ))}
