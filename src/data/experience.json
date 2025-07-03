@@ -1,6 +1,15 @@
 {
     "experience": [
         {
+            "title": "Student Assistant",
+            "company": "Lawrence Berkeley National Laboratory",
+            "span": "06-2024 to Present",
+            "description": [
+                "Implemented and documented a full design system coonsisting of several dozen user interface components from Figma design specifications using React, Typescript, Storybook, and SCSS.",
+                "Wrote tests utilizing snapshot testing with Jest and Playwright to provide consistency and 100% code coverage."
+            ]
+        },
+        {
             "title": "Research Assistant",
             "company": "University of California, Irvine",
             "span": "09-2024 to Present",
