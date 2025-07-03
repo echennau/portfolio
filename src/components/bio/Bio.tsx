@@ -47,7 +47,7 @@ const Bio = () => {
               GitHub
             </a>
             <Link
-              href="/data/echennau_tech_resume-04062025.pdf"
+              href="/data/echennau_tech_resume.pdf"
               target="_blank"
               className="hover:cursor-pointer flex items-center hover:text-gray-400/50 transition duration-300"
             >
