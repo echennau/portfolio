@@ -20,6 +20,8 @@ function Project({ mdFileText, project }: ProjectProps) {
       ? "bg-white text-primary"
       : "bg-black text-secondary";
 
+  const imageSrc = `/data/projects/${project.id}/image.png`;
+
   return (
     <div
       className={`${themeClass} px-2 sm:px-16 md:px-24 lg:px-32 xl:px-64 flex flex-col items-center flex-1 gap-y-8 py-8`}
@@ -28,7 +30,7 @@ function Project({ mdFileText, project }: ProjectProps) {
         className={`shadow-2xl rounded-2xl w-fit h-fit min-w-96 min-h-96 p-4 md:p-8 transition flex justify-center items-center bg-white z-20`}
       >
         <Image
-          src={project.image}
+          src={imageSrc}
           alt={project.title}
           width={500}
           height={500}
@@ -81,10 +83,12 @@ function Project({ mdFileText, project }: ProjectProps) {
             //   return;
             // },
             code: ({ children }) => (
-              <code className="bg-gray-100 p-2 rounded">{children}</code>
+              <code className={`${markdownThemeClass} rounded"`}>
+                {children}
+              </code>
             ),
             pre: ({ children }) => (
-              <pre className="bg-gray-100 p-4 rounded">{children}</pre>
+              <pre className={`${markdownThemeClass} rounded`}>{children}</pre>
             ),
           }}
         >

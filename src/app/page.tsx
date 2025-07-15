@@ -16,11 +16,11 @@ export default function Home() {
     >
       <Landing />
       <Bio />
+      <Projects />
+      <Divider />
       <Experience />
       <Divider />
       <Education />
-      <Divider />
-      <Projects />
       <Divider />
       <Contact />
     </div>

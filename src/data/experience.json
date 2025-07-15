@@ -3,43 +3,42 @@
         {
             "title": "Student Assistant",
             "company": "Lawrence Berkeley National Laboratory",
-            "span": "06-2024 to Present",
+            "span": "06-2025 to Present",
+            "location": "Berkeley, CA",
             "description": [
-                "Implemented and documented a full design system coonsisting of several dozen user interface components from Figma design specifications using React, Typescript, Storybook, and SCSS.",
-                "Wrote tests utilizing snapshot testing with Jest and Playwright to provide consistency and 100% code coverage."
+                "Implemented and documented a full design system consisting of several dozen user interface components from Figma design specifications using React, Typescript, Vite, and SCSS.",
+                "Developed visual regression tests using Jest and Storybook, achieving 100% code coverage and UI consistency."
             ]
         },
         {
             "title": "Research Assistant",
             "company": "University of California, Irvine",
-            "span": "09-2024 to Present",
+            "span": "11-2024 to Present",
+            "location": "Irvine, CA",
             "description": [
-                "Implemented multithreading for BLANT, allowing an up to 16 times increase in run time via parallelism.",
-                "Optimized the Makefile for BLANT, reducing build time by 20 percent.",
-                "Utilized React and Express in the development of web applications and interfaces for research projects."
+                "Implemented parallelized random sampling on Linux systems, allowing an up to 16 times decrease in runtime.",
+                "Decreased build times by 25% by eliminating redundancy and optimizing the Makefile.",
+                "Developed in-house hosted web frontends for research applications using React and Express."
             ]
         },
         {
             "title": "Summer Technology Intern",
             "company": "Alameda County Information and Technologies Department",
-            "span": "05-2022 to 08-2022",
+            "span": "06-2022 to 08-2022",
+            "location": "Oakland, CA",
             "description": [
-                "Configured and repaired private networking systems that included switches, firewalls and routers, allowing for faster communications and network connection in three new buildings. ",
-                "Deployed Virtual Machines utilizing vSphere for virtual work access to increase productivity.",
-                "Investigated and eliminated cybersecurity intrusions utilizing CrowdStrike.",
-                "Uninstalled and disk wiped nonessential servers in the Oakland data center, optimizing the network.",
-                "Met with clients to determine network requirements for a new office building."
+                "Configured and repaired private networks systems components, such as switches, firewalls, and routers, allowing for faster communications and network connection in three new buildings.",
+                "Uninstalled and disk wiped nonessential servers in the Oakland data center, optimizing the network."
             ]
         },
         {
             "title": "Engineering Intern",
             "company": "Hewlett Packard Enterprise",
-            "span": "04-2021 to 08-2021",
+            "span": "05-2021 to 08-2021",
+            "location": "Remote",
             "description": [
-                "Developed and optimized a Python command-line script, increasing developer querying speed of real HPE customer servers by 70 percent.",
-                "Created full coverage software tests to ensure code quality across Windows and Linux operating systems.",
-                "Utilized Git and GitHub to track commits, changes, and monitor test cases.",
-                "Gained insight on server array traffic, data management, and server array software."
+                "Developed a Python script to remotely connect and query live HPE customer services for data traffic analysis.",
+                "Created suites of unit and integration tests to ensure code quality across Windows and Linux."
             ]
         }
     ]

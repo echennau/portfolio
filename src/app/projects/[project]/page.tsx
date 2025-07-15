@@ -18,7 +18,7 @@ export default async function ProjectPage({ params }: { params: any }) {
   );
 
   const projectMDLink = path.join(filePath, "summary.md");
-  const projectData = projects.projects.find((p) => p.link.endsWith(project));
+  const projectData = projects.projects.find((p) => p.id === project);
 
   if (
     !fs.existsSync(filePath) ||
