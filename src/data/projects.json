@@ -1,8 +1,7 @@
 {
     "projects": [
         {
-            "link": "/projects/sense",
-            "image": "/data/projects/sense/image.png",
+            "id": "sense",
             "title": "Sense",
             "description": "Personal budgeting and finance app.",
             "tags": [
@@ -15,8 +14,7 @@
             ]
         },
         {
-            "link": "/projects/redrawer",
-            "image": "/data/projects/redrawer/image.png",
+            "id": "redrawer",
             "title": "Redrawer",
             "description": "Image processing and recreation tool, redrawing on Microsoft Paint.",
             "tags": [
@@ -26,8 +24,17 @@
             ]
         },
         {
-            "link": "/projects/facets",
-            "image": "/data/projects/facets/image.png",
+            "id": "BLANT",
+            "title": "BLANT",
+            "description": "Basic Local Alignment of Network Topology",
+            "tags": [
+                "C",
+                "Data Structures and Algorithms",
+                "Multithreading"
+            ]
+        },
+        {
+            "id": "facets",
             "title": "Facets-Next",
             "description": "Chat and stickyboard website.",
             "tags": [
@@ -39,8 +46,7 @@
             ]
         },
         {
-            "link": "/projects/terrain-gen",
-            "image": "/data/projects/terrain-gen/image.png",
+            "id": "terrain-gen",
             "title": "Terrain Generator",
             "description": "Terrain generation using the diamond-square algorithm.",
             "tags": [
@@ -50,8 +56,7 @@
             ]
         },
         {
-            "link": "/projects/skiplist",
-            "image": "/data/projects/skiplist/image.png",
+            "id": "skiplist",
             "title": "Skiplist Visualizer",
             "description": "Interactive visualization tool for the skiplist data structure.",
             "tags": [
@@ -60,8 +65,7 @@
             ]
         },
         {
-            "link": "/projects/portfolio",
-            "image": "/data/projects/portfolio/image.png",
+            "id": "portfolio",
             "title": "Personal Website",
             "description": "My own personal website — the one you are seeing now.",
             "tags": [
@@ -72,8 +76,7 @@
             ]
         },
         {
-            "link": "/projects/genotypic",
-            "image": "/data/projects/genotypic/image.png",
+            "id": "genotypic",
             "title": "Genotypic",
             "description": "Mendelian genetics offspring genotype calculator.",
             "tags": [
@@ -84,8 +87,7 @@
             ]
         },
         {
-            "link": "/projects/pyadskipper",
-            "image": "/data/projects/pyadskipper/image.png",
+            "id": "pyadskipper",
             "title": "PyAdSkipper",
             "description": "Python script to skip Spotify advertisements.",
             "tags": [
@@ -94,8 +96,7 @@
             ]
         },
         {
-            "link": "/projects/search_engine",
-            "image": "/data/projects/search_engine/image.png",
+            "id": "search_engine",
             "title": "Search Engine",
             "description": "Search Engine for my Information Retrieval Class.",
             "tags": [

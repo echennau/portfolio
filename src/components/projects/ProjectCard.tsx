@@ -10,8 +10,7 @@ import FadeInDiv from "../utils/FadeInDiv";
 
 type ProjectCardProps = {
   projectData: {
-    link: string;
-    image: string;
+    id: string;
     title: string;
     description: string;
     tags: string[];
@@ -25,6 +24,9 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
   const cardClass =
     useTheme().theme === Theme.DARK ? "text-secondary bg-black" : "bg-white";
 
+  const link = `/projects/${projectData.id}`;
+  const imageSrc = `/data/projects/${projectData.id}/image.png`;
+
   return (
     <FadeInDiv
       className={
@@ -34,7 +36,7 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
       direction="up"
     >
       <Link
-        href={projectData.link}
+        href={link}
         className={`rounded-2xl outline-offset-4 ${
           useTheme().theme === Theme.DARK
             ? "focus:outline-black"
@@ -51,7 +53,7 @@ const ProjectCard = ({ projectData }: ProjectCardProps) => {
               width={600}
               height={350}
               alt={projectData.title}
-              src={projectData.image}
+              src={imageSrc}
               className="object-cover h-full w-full"
             />
           </CardHeader>

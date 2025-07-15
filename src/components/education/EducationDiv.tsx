@@ -2,8 +2,8 @@ import Image from "next/image";
 import React from "react";
 
 type EducationData = {
+  id: string;
   school: string;
-  imageURL: string;
   span: string;
   description: string[];
 };
@@ -14,7 +14,8 @@ type EducationDivProps = {
 };
 
 const EducationDiv = ({ educationData, index }: EducationDivProps) => {
-  const { school, span, imageURL, description } = educationData;
+  const { school, span, description } = educationData;
+  const imageURL = `/data/education/${educationData.id}.png`;
   const className =
     index % 2
       ? "md:self-start md:text-left md:flex-row-reverse"
