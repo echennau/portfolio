@@ -33,6 +33,7 @@ const Bio = () => {
           </div>
           <div className="flex flex-col gap-y-1 text-gray-400 underline text-left">
             <a
+              target="_blank"
               href="https://www.linkedin.com/in/echennau/"
               className="hover:cursor-pointer flex items-center hover:text-gray-400/50 transition duration-300"
             >
@@ -40,7 +41,8 @@ const Bio = () => {
               LinkedIn
             </a>
             <a
-              href="https://github.com/3than0ls"
+              target="_blank"
+              href="https://github.com/echennau"
               className="hover:cursor-pointer flex items-center hover:text-gray-400/50 transition duration-300"
             >
               <FiGithub className="mr-2 text-gray-500 size-5" />

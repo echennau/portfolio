@@ -73,7 +73,7 @@ function Project({ mdFileText, project }: ProjectProps) {
             //   return (
             //     <img
             //       src={
-            //         "https://github.com/3than0ls/terrain-gen/blob/master/assets/sample.png"
+            //         "https://github.com/echennau/terrain-gen/blob/master/assets/sample.png"
             //       }
             //       alt={alt!}
             //       width={500}

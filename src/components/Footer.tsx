@@ -25,7 +25,7 @@ const Footer = () => {
           <span className="hidden md:block ml-2">LinkedIn</span>
         </a>
         <a
-          href="https://github.com/3than0ls"
+          href="https://github.com/echennau"
           className="hover:cursor-pointer flex items-center text-gray-500 hover:text-gray-500/50 transition duration-300"
         >
           <FiGithub className="size-5" />

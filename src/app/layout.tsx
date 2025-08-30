@@ -14,7 +14,7 @@ const afacad = Afacad({
 
 console.assert(process.env.MAIN_URL);
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.MAIN_URL!),
+  metadataBase: new URL(process.env.MAIN_URL!) ?? undefined,
   title: "Ethan Chennault | Portfolio",
   description:
     "Explore the portfolio of Ethan Chennault - student at UCI and full-stack developer.",
@@ -64,7 +64,7 @@ export default function RootLayout({
     name: "Ethan Chennault",
     url: process.env.BASE_URL,
     image: `${process.env.BASE_URL}/og-image.png`,
-    sameAs: ["https://github.com/3than0ls", "https://linkedin.com/in/echennau"],
+    sameAs: ["https://github.com/echennau", "https://linkedin.com/in/echennau"],
     jobTitle: "CS Student at UCI",
   };
 
