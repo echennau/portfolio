@@ -1,56 +1,29 @@
-import type { Metadata, Viewport } from "next";
-import { Afacad } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "../components/Navbar";
-import ThemeProvider from "../contexts/ThemeContext";
-import Footer from "../components/Footer";
+import { ThemeProvider } from "../components/ThemeProvider";
 
-const afacad = Afacad({
-  weight: ["400", "700"],
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const spaceGrotesk = localFont({
+  src: "../../node_modules/@echennau/remi/dist/fonts/SpaceGrotesk-VariableFont_wght.ttf",
+  variable: "--font-space-grotesk",
+  display: "swap",
 });
 
-console.assert(process.env.MAIN_URL);
-export const metadata: Metadata = {
-  metadataBase: new URL(process.env.MAIN_URL!) ?? undefined,
-  title: "Ethan Chennault | Portfolio",
-  description:
-    "Explore the portfolio of Ethan Chennault - student at UCI and full-stack developer.",
-  keywords: [
-    "echennau",
-    "Ethan Chennault",
-    "Chennault",
-    "Portfolio",
-    "Personal Website",
-    "Next.js",
-    "TypeScript",
-    "TailwindCSS",
-    "Python",
-  ],
-  openGraph: {
-    title: "Ethan Chennault | Computer Science Student @ UCI",
-    description:
-      "Explore the portfolio of Ethan Chennault - student at UCI and full-stack developer.",
-    url: process.env.MAIN_URL,
-    siteName: "Ethan Chennault's Portfolio",
-    images: [
-      {
-        url: "/og_image.png", // ensure this image is optimized
-        width: 900,
-        height: 900,
-        alt: "Ethan Chennault Portfolio",
-      },
-    ],
-    type: "website",
-  },
-};
+const montserrat = localFont({
+  src: "../../node_modules/@echennau/remi/dist/fonts/Montserrat-VariableFont_wght.ttf",
+  variable: "--font-montserrat",
+  display: "swap",
+});
 
-export const viewport: Viewport = {
-  initialScale: 1,
-  width: "device-width",
-  viewportFit: "cover",
+const sourceCodePro = localFont({
+  src: "../../node_modules/@echennau/remi/dist/fonts/SourceCodePro-VariableFont_wght.ttf",
+  variable: "--font-source-code-pro",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "Ethan Chennault",
+  description: "Ethan Chennault's Portfolio",
 };
 
 export default function RootLayout({
@@ -58,35 +31,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Ethan Chennault",
-    url: process.env.BASE_URL,
-    image: `${process.env.BASE_URL}/og-image.png`,
-    sameAs: ["https://github.com/echennau", "https://linkedin.com/in/echennau"],
-    jobTitle: "CS Student at UCI",
-  };
-
   return (
-    <html lang="en">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body
-        className={`${afacad.className} flex flex-col antialiased max-w-full min-h-screen w-screen`}
-      >
-        <ThemeProvider>
-          <Navbar />
-          <div className="overflow-hidden flex-grow flex flex-col">
-            {children}
-          </div>
-          <Footer />
-        </ThemeProvider>
-        <Analytics />
+    <html
+      lang="en"
+      className={`h-full antialiased bg-bg-default ${spaceGrotesk.variable} ${montserrat.variable} ${sourceCodePro.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

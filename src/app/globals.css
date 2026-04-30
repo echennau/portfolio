@@ -1,19 +1,2 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-html {
-    scroll-behavior: smooth;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-.no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-::selection {
-    @apply bg-accent/75 text-white
-}
+@import "@echennau/remi/tailwind.css";
+@import "@echennau/remi";

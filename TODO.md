@@ -1,17 +1,21 @@
-Add hover animation to bio card, something like a scale and with a shimmer border and slight change in background
+# TODO
 
-Landing should change to a cool interactive blob animation with threejs or something. Or a laser thing!!
+As the end host, I want to be able to modify the projects showcased on my website in an intuitive and centralized way.
 
-FINISH POLISHING:
+I want to be able to showcase projects that demonstrate multiple skills. I want to be able to include a preview image and a brief write up to describe the project and my contributions.
 
-- add more blobs to everywhere. maybe randomize it?
+Solution: public/data/projects with the following structure:
 
-- big slider modal idk the word thing for display projects
+```
+public/data/projects/{project_id}/
+-> preview.png
+-> summary.md
+-> project.json, which has structure
+    {
+        preview: {preview URL},
+        summary: {summary URL},
+        tags: [{list of tags}]
+    }
+```
 
-REWORK
-
-The entire website, change everything to use shadcn, rework all of it, all of it.
-
-layouts are bad, use grid more, create some tokens and use CSS variable with actual dark/light color scale,
-
-This is basically a prototype
+Use next-themes
