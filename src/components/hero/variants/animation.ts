@@ -3,8 +3,8 @@ import { useEffect, RefObject } from "react";
 const INITIAL_OPACITY = 0.8;
 const FADE_IN_DURATION = 0.01;
 const FADE_IN_JITTER = 0.15;
-const ANIMATION_DURATION = 1200;
-const MAX_START_DELAY = 1000;
+const ANIMATION_DURATION = 1000;
+const MAX_START_DELAY = 800;
 
 function clamp(v: number, min: number, max: number) {
   return Math.min(max, Math.max(min, v));
