@@ -3,6 +3,7 @@ import React from "react";
 import Flicker from "./variants/flicker/Flicker";
 import { useStatic } from "./variants/static/useStatic";
 import Camo from "./variants/static/Static";
+import Laser from "./variants/laser/Laser";
 
 interface HeroProps {
   variant?: "default";
@@ -29,7 +30,10 @@ const Hero = ({ variant = "default" }: HeroProps) => {
         />
       </div> */}
       {/* <Camo /> */}
-      {hero}
+      <div className="w-full h-full absolute">
+        <Laser />
+      </div>
+      <Flicker />
     </div>
   );
 };
