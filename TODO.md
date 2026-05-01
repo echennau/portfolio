@@ -18,4 +18,4 @@ public/data/projects/{project_id}/
     }
 ```
 
-Use next-themes
+Project cards: full solid color background with mini picture/logo on left, hover will shrink card bg left to default bg color: https://unshift.jp/works/#ijigen-remix (minimum display mode)

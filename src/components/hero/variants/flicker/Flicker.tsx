@@ -1,6 +1,7 @@
 import { useRef, useMemo, useEffect, useState } from "react";
-import { useFlickerAnimation } from "./animation";
-import { useTheme } from "../../ThemeProvider";
+import { useFlickerAnimation } from "./useFlicker";
+import { useTheme } from "../../../ThemeProvider";
+import { useStatic } from "../static/useStatic";
 
 // reference values tuned for 9-char "Chennault" at ratio=1
 const BASE_FONT_VW = 19.5;
@@ -85,8 +86,8 @@ const FlickerText = ({
     </>
   );
 };
+
 const palette = [
-  "--color-primary-100",
   "--color-primary-200",
   "--color-primary-300",
   "--color-primary-400",
@@ -94,29 +95,16 @@ const palette = [
   "--color-primary-600",
   "--color-primary-700",
   "--color-primary-800",
-  "--color-primary-900",
 ];
+const twoColors = (palette: string[]) => {
+  const first = Math.floor(Math.random() * palette.length);
+  const firstColor = palette.splice(first, 1)[0];
+  const second = Math.floor(Math.random() * palette.length);
+  const secondColor = palette.splice(second, 1)[0];
+  return [firstColor, secondColor];
+};
 
 const Flicker = () => {
-  const [left, setLeft] = useState("--color-primary-400");
-  const [right, setRight] = useState("--color-primary-500");
-  const { theme } = useTheme();
-
-  // TODO: add a shifting rectangle UCP camo RGBA pattern on top of gradient
-  // TODO: experiment with slow glow rotation rather than shiftings
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const themedPalette =
-        theme === "dark" ? palette.slice(0, 6) : palette.slice(3);
-      setLeft(themedPalette[Math.floor(Math.random() * themedPalette.length)]);
-      setRight(themedPalette[Math.floor(Math.random() * themedPalette.length)]);
-    }, 1000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [left]);
-
   return (
     <div className="px-[4vw] w-full h-full flex flex-col justify-end">
       {/* <div className="pl-[0.5vw] flex">
@@ -131,20 +119,13 @@ const Flicker = () => {
           className="type-mono"
           style={
             {
-              backgroundImage: `linear-gradient(calc(var(--grad-angle)), var(${left}), var(${right}))`,
+              //   backgroundImage: `url(${camoUrl}), linear-gradient(calc(var(--grad-angle)), var(${left}), var(${right}))`,
+              backgroundImage: `linear-gradient(calc(var(--grad-angle)), var(--color-primary), var(--color-secondary))`,
               WebkitBackgroundClip: "text",
               backgroundClip: "text",
               color: "transparent",
-              ["--c0" as string]:
-                "color-mix(in srgb, var(--color-primary-light) 30%, transparent)",
-              ["--c1" as string]:
-                "color-mix(in srgb, var(--color-primary-light) 20%, transparent)",
-              ["--c2" as string]:
-                "color-mix(in srgb, var(--color-primary-light) 10%, transparent)",
               textShadow: [
-                "0 0 150px var(--c0)",
-                "0 0 350px var(--c1)",
-                "0 0 700px var(--c2)",
+                "0 0 300px var(color-mix(in srgb, var(--color-primary-light) 25%, transparent))",
               ].join(", "),
             } as React.CSSProperties
           }
