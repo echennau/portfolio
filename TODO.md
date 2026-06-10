@@ -19,3 +19,5 @@ public/data/projects/{project_id}/
 ```
 
 Project cards: full solid color background with mini picture/logo on left, hover will shrink card bg left to default bg color: https://unshift.jp/works/#ijigen-remix (minimum display mode)
+
+https://threejs.org/docs/#AsciiEffect
