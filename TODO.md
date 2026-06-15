@@ -47,7 +47,6 @@ dark/light mode button https://magicui.design/docs/components/animated-theme-tog
 
 https://demos.gsap.com/demo/macos-dock-effect/ better dock better!
 
-layout animation: https://motion.dev/docs/react-layout-animations
 
 # Layout
 
@@ -59,9 +58,10 @@ Footer Bounce! for shiggles https://demos.gsap.com/demo/footer-bounce/
 
 Animate scroll position
 
-# Other cool things
+Animated layout changing (see framer motion)
+layout animation: https://motion.dev/docs/react-layout-animations
 
-GSAP scoll integration for landing page
+# Other cool things
 
 Folder preview: https://www.vengenceui.com/components/folder-preview
 

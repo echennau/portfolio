@@ -4,7 +4,7 @@ import { Section } from "../../components/layout/Section"
 interface ProjectsProps {}
 
 const Projects = ({}: ProjectsProps) => {
-  return <Section>Projects</Section>
+  return <Section id='projects'>Projects</Section>
 }
 
 export default Projects

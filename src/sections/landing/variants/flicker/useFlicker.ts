@@ -3,8 +3,8 @@ import { useEffect, RefObject } from "react"
 const INITIAL_OPACITY = 0.8
 const FADE_IN_DURATION = 0.01
 const FADE_IN_JITTER = 0.15
-const ANIMATION_DURATION = 1000
-const MAX_START_DELAY = 800
+const DURATION = 500
+const MAX_START_DELAY = 400
 
 function clamp(v: number, min: number, max: number) {
   return Math.min(max, Math.max(min, v))
@@ -59,14 +59,21 @@ export function generateFlickerKeyframes(): Keyframe[] {
   return points.sort((a, b) => (a.offset as number) - (b.offset as number))
 }
 
-export function useFlickerAnimation(ref: RefObject<HTMLElement | null>) {
+export interface FlickerAnimationOptions {
+  duration?: number
+  maxStartDelay?: number
+}
+
+export function useFlickerAnimation(ref: RefObject<HTMLElement | null>, options?: FlickerAnimationOptions) {
   useEffect(() => {
     const el = ref.current
     if (!el) return
 
-    // fixed per-character offset so each char keeps a consistent phase across loops
-    const startDelay = Math.random() * MAX_START_DELAY
-    const animationDuration = ANIMATION_DURATION - startDelay * Math.random() * 0.7
+    const maxDelay = options?.maxStartDelay ?? MAX_START_DELAY
+    const baseDuration = options?.duration ?? DURATION
+
+    const startDelay = Math.random() * maxDelay
+    const animationDuration = baseDuration - startDelay * Math.random() * 0.7
 
     const anim = el.animate(generateFlickerKeyframes(), {
       duration: animationDuration,
@@ -76,5 +83,5 @@ export function useFlickerAnimation(ref: RefObject<HTMLElement | null>) {
     })
 
     return () => anim.cancel()
-  }, [ref])
+  }, [ref]) // options intentionally omitted — animation is fixed at mount time
 }
