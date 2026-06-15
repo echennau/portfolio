@@ -76,3 +76,8 @@ Trigger on scroll: https://demos.gsap.com/demo/trigger-on-scroll/
 
 
 ## project prettier formatter
+
+
+## if struggling with flash on load
+
+https://www.npmjs.com/package/next-themes

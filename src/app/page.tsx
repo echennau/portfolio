@@ -1,37 +1,29 @@
 "use client";
 
-import Landing from "../components/landing/Landing";
 import { Section } from "../components/layout/Section";
 import { useTheme } from "../components/ThemeProvider";
 import { ReactLenis } from "lenis/react";
+import Landing from "../sections/landing/Landing";
+import Bio from "../sections/bio/Bio";
+import Projects from "../sections/projects/Projects";
+import Contact from "../sections/contact/Contact";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
 
   return (
     <ReactLenis root>
-      <main>
+      <main className="overflow-x-hidden">
         <button
-          className="fixed"
+          className="fixed z-50"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         >
           Toggle theme ({theme})
         </button>
-        <Section className="h-screen">
           <Landing />
-        </Section>
-        <Section className="h-128 bg-red-300">
-          <h1 className="text-8xl text-blue-800">content</h1>
-        </Section>
-        <Section className="h-128 bg-blue-300">
-          <h1 className="text-8xl text-blue-800">content</h1>
-        </Section>
-        <Section className="h-128 bg-green-300">
-          <h1 className="text-8xl text-blue-800">content</h1>
-        </Section>
-        <Section className="h-128 bg-purple-300">
-          <h1 className="text-8xl text-blue-800">content</h1>
-        </Section>
+          <Bio />
+          <Projects />
+          <Contact />
       </main>
     </ReactLenis>
   );
