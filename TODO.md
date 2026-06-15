@@ -24,13 +24,11 @@ NAH, USE COOL HOVERCARDS WITH WAVY BORDERS
 
 https://threejs.org/docs/#AsciiEffect
 
-
 ## comopnents
 
 # Landing page needs some sort of progressive blur
 
 https://magicui.design/docs/components/progressive-blur
-
 
 # Project table with a hover card
 
@@ -38,7 +36,7 @@ https://www.vengenceui.com/components/cursor-card (modify somehow)
 
 https://demos.gsap.com/demo/flexbox-filtering/ (project table filter)
 
-border shine for the cards? https://magicui.design/docs/components/shine-border 
+border shine for the cards? https://magicui.design/docs/components/shine-border
 
 # Standalone navbar
 
@@ -50,7 +48,6 @@ dark/light mode button https://magicui.design/docs/components/animated-theme-tog
 https://demos.gsap.com/demo/macos-dock-effect/ better dock better!
 
 layout animation: https://motion.dev/docs/react-layout-animations
-
 
 # Layout
 
@@ -74,9 +71,7 @@ Morph Text: https://www.vengenceui.com/components/morph-text / https://magicui.d
 
 Trigger on scroll: https://demos.gsap.com/demo/trigger-on-scroll/
 
-
 ## project prettier formatter
-
 
 ## if struggling with flash on load
 

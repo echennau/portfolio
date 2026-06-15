@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import { useStatic } from "./useStatic";
+import { useStatic } from "./useStatic"
 
 const Camo = () => {
-  const camoUrl = useStatic();
+  const camoUrl = useStatic()
 
   return (
     <div className="px-[4vw] w-full h-full flex flex-col justify-end">
@@ -21,7 +21,7 @@ const Camo = () => {
         Saving this for a rainy day
       </span>
     </div>
-  );
-};
+  )
+}
 
-export default Camo;
+export default Camo

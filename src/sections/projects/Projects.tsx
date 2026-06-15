@@ -1,13 +1,10 @@
 import React from "react"
-import { Section } from "../../components/layout/Section";
+import { Section } from "../../components/layout/Section"
 
-interface ProjectsProps {
-}
+interface ProjectsProps {}
 
 const Projects = ({}: ProjectsProps) => {
- return <Section>
-    Projects
- </Section>
+  return <Section>Projects</Section>
 }
 
 export default Projects

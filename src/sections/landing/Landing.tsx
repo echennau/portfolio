@@ -1,21 +1,19 @@
-"use client";
-import React from "react";
-import Flicker from "./variants/flicker/Flicker";
-import { useStatic } from "./variants/static/useStatic";
-import Camo from "./variants/static/Static";
-import Laser from "./variants/laser/Laser";
-import { Section } from "../layout/Section";
+"use client"
+import React from "react"
+import Flicker from "./variants/flicker/Flicker"
+import { useStatic } from "./variants/static/useStatic"
+import Laser from "./variants/laser/Laser"
 
 interface LandingProps {
-  variant?: "default";
+  variant?: "default"
 }
 
 const Landing = ({ variant = "default" }: LandingProps) => {
-  let landing;
+  let landing
   if (variant === "default") {
-    landing = <Flicker />;
+    landing = <Flicker />
   }
-  const bg = useStatic();
+  const bg = useStatic()
 
   return (
     <section className="w-full h-screen overflow-hidden bg-default flex flex-col justify-center items-center">
@@ -36,7 +34,7 @@ const Landing = ({ variant = "default" }: LandingProps) => {
       </div>
       <Flicker />
     </section>
-  );
-};
+  )
+}
 
-export default Landing;
+export default Landing

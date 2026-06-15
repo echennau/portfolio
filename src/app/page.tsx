@@ -1,15 +1,14 @@
-"use client";
+"use client"
 
-import { Section } from "../components/layout/Section";
-import { useTheme } from "../components/ThemeProvider";
-import { ReactLenis } from "lenis/react";
-import Landing from "../sections/landing/Landing";
-import Bio from "../sections/bio/Bio";
-import Projects from "../sections/projects/Projects";
-import Contact from "../sections/contact/Contact";
+import { useTheme } from "../components/ThemeProvider"
+import { ReactLenis } from "lenis/react"
+import Landing from "../sections/landing/Landing"
+import Bio from "../sections/bio/Bio"
+import Projects from "../sections/projects/Projects"
+import Contact from "../sections/contact/Contact"
 
 export default function Home() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme()
 
   return (
     <ReactLenis root>
@@ -20,11 +19,11 @@ export default function Home() {
         >
           Toggle theme ({theme})
         </button>
-          <Landing />
-          <Bio />
-          <Projects />
-          <Contact />
+        <Landing />
+        <Bio />
+        <Projects />
+        <Contact />
       </main>
     </ReactLenis>
-  );
+  )
 }

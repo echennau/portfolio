@@ -1,29 +1,21 @@
-import { useRef, useMemo, useEffect, useState } from "react";
-import { useFlickerAnimation } from "./useFlicker";
-import { useTheme } from "../../../ThemeProvider";
-import { useStatic } from "../static/useStatic";
+import { useRef, useMemo, } from "react"
+import { useFlickerAnimation } from "./useFlicker"
 
 // reference values tuned for 9-char "Chennault" at ratio=1
-const BASE_FONT_VW = 19.5;
-const BASE_MARGIN_VW = -1.25;
-const BASE_CHARS = 9;
+const BASE_FONT_VW = 19.5
+const BASE_MARGIN_VW = -1.25
+const BASE_CHARS = 9
 
 interface FlickerCharProps {
-  children: string;
-  fontSize: string;
-  marginLeft: string;
-  className?: string;
-  style?: React.CSSProperties;
+  children: string
+  fontSize: string
+  marginLeft: string
+  className?: string
+  style?: React.CSSProperties
 }
-const FlickerChar = ({
-  children,
-  fontSize,
-  marginLeft,
-  className,
-  style,
-}: FlickerCharProps) => {
-  const ref = useRef<HTMLSpanElement>(null);
-  useFlickerAnimation(ref);
+const FlickerChar = ({ children, fontSize, marginLeft, className, style }: FlickerCharProps) => {
+  const ref = useRef<HTMLSpanElement>(null)
+  useFlickerAnimation(ref)
 
   return (
     <span
@@ -40,30 +32,24 @@ const FlickerChar = ({
     >
       {children}
     </span>
-  );
-};
+  )
+}
 
 interface FlickerTextProps {
-  text: string;
-  ratio?: number;
-  className?: string;
-  style?: React.CSSProperties;
+  text: string
+  ratio?: number
+  className?: string
+  style?: React.CSSProperties
 }
-const FlickerText = ({
-  text,
-  ratio = 1,
-  className,
-  style,
-}: FlickerTextProps) => {
-  const n = text.length;
-  const fontSize = `${(BASE_FONT_VW * BASE_CHARS * ratio) / n}vw`;
-  const marginLeft = `${(BASE_MARGIN_VW * BASE_CHARS * ratio) / n}vw`;
+const FlickerText = ({ text, ratio = 1, className, style }: FlickerTextProps) => {
+  const n = text.length
+  const fontSize = `${(BASE_FONT_VW * BASE_CHARS * ratio) / n}vw`
+  const marginLeft = `${(BASE_MARGIN_VW * BASE_CHARS * ratio) / n}vw`
 
   const angles = useMemo(
-    () =>
-      text.split("").map((char, i) => (char.charCodeAt(0) * 37 + i * 73) % 360),
+    () => text.split("").map((char, i) => (char.charCodeAt(0) * 37 + i * 73) % 360),
     [text],
-  );
+  )
 
   return (
     <>
@@ -84,8 +70,8 @@ const FlickerText = ({
         </FlickerChar>
       ))}
     </>
-  );
-};
+  )
+}
 
 const palette = [
   "--color-primary-200",
@@ -95,14 +81,14 @@ const palette = [
   "--color-primary-600",
   "--color-primary-700",
   "--color-primary-800",
-];
+]
 const twoColors = (palette: string[]) => {
-  const first = Math.floor(Math.random() * palette.length);
-  const firstColor = palette.splice(first, 1)[0];
-  const second = Math.floor(Math.random() * palette.length);
-  const secondColor = palette.splice(second, 1)[0];
-  return [firstColor, secondColor];
-};
+  const first = Math.floor(Math.random() * palette.length)
+  const firstColor = palette.splice(first, 1)[0]
+  const second = Math.floor(Math.random() * palette.length)
+  const secondColor = palette.splice(second, 1)[0]
+  return [firstColor, secondColor]
+}
 
 const Flicker = () => {
   return (
@@ -132,7 +118,7 @@ const Flicker = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Flicker;
+export default Flicker

@@ -1,13 +1,10 @@
 import React from "react"
-import { Section } from "../../components/layout/Section";
+import { Section } from "../../components/layout/Section"
 
-interface ContactProps {
-}
+interface ContactProps {}
 
 const Contact = ({}: ContactProps) => {
- return <Section>
-    Contact
- </Section>
+  return <Section>Contact</Section>
 }
 
 export default Contact
