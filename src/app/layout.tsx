@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import localFont from "next/font/local"
 import "./globals.css"
-import { ThemeProvider } from "../components/ThemeProvider"
+import { ThemeProvider } from '@teispace/next-themes';
 
 const spaceGrotesk = localFont({
   src: "../../node_modules/@echennau/remi/dist/fonts/SpaceGrotesk-VariableFont_wght.ttf",
@@ -37,15 +37,10 @@ export default function RootLayout({
       className={`h-full antialiased bg-bg-default ${spaceGrotesk.variable} ${montserrat.variable} ${sourceCodePro.variable}`}
       suppressHydrationWarning
     >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})()`,
-          }}
-        />
-      </head>
       <body className="min-h-full flex flex-col">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider defaultTheme="dark" enableSystem={false}>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

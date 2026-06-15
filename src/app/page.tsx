@@ -1,6 +1,6 @@
 "use client"
 
-import { useTheme } from "../components/ThemeProvider"
+import { useTheme } from "@teispace/next-themes"
 import { ReactLenis } from "lenis/react"
 import Landing from "../sections/landing/Landing"
 import Bio from "../sections/bio/Bio"
@@ -16,6 +16,7 @@ export default function Home() {
         <button
           className="fixed z-50"
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          suppressHydrationWarning
         >
           Toggle theme ({theme})
         </button>
