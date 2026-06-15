@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "../components/hero/Hero";
+import Landing from "../components/landing/Landing";
 import { Section } from "../components/layout/Section";
 import { useTheme } from "../components/ThemeProvider";
 import { ReactLenis } from "lenis/react";
@@ -18,7 +18,7 @@ export default function Home() {
           Toggle theme ({theme})
         </button>
         <Section className="h-screen">
-          <Hero />
+          <Landing />
         </Section>
         <Section className="h-128 bg-red-300">
           <h1 className="text-8xl text-blue-800">content</h1>

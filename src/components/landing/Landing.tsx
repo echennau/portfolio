@@ -5,14 +5,14 @@ import { useStatic } from "./variants/static/useStatic";
 import Camo from "./variants/static/Static";
 import Laser from "./variants/laser/Laser";
 
-interface HeroProps {
+interface LandingProps {
   variant?: "default";
 }
 
-const Hero = ({ variant = "default" }: HeroProps) => {
-  let hero;
+const Landing = ({ variant = "default" }: LandingProps) => {
+  let landing;
   if (variant === "default") {
-    hero = <Flicker />;
+    landing = <Flicker />;
   }
   const bg = useStatic();
 
@@ -38,4 +38,4 @@ const Hero = ({ variant = "default" }: HeroProps) => {
   );
 };
 
-export default Hero;
+export default Landing;
