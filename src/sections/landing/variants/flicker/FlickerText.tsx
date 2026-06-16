@@ -4,12 +4,12 @@ import { useFlickerAnimation, FlickerAnimationOptions } from "./useFlicker"
 interface FlickerCharProps {
   children: string
   fontSize: string
-  letterSpacing: string
+  charSpacing: string
   className?: string
   style?: React.CSSProperties
   animationOptions?: FlickerAnimationOptions
 }
-const FlickerChar = ({ children, fontSize, letterSpacing, className, style, animationOptions }: FlickerCharProps) => {
+const FlickerChar = ({ children, fontSize, charSpacing, className, style, animationOptions }: FlickerCharProps) => {
   const ref = useRef<HTMLSpanElement>(null)
   useFlickerAnimation(ref, animationOptions)
 
@@ -18,8 +18,8 @@ const FlickerChar = ({ children, fontSize, letterSpacing, className, style, anim
       ref={ref}
       style={{
         fontSize,
-        marginLeft: letterSpacing,
-        letterSpacing: 0,
+        marginLeft: charSpacing,
+        charSpacing: 0,
         lineHeight: 1,
         opacity: 0,
         ...style,
@@ -35,21 +35,21 @@ const FlickerChar = ({ children, fontSize, letterSpacing, className, style, anim
 export interface FlickerTextProps {
   text: string
   fontSize: string
-  letterSpacing: string
+  charSpacing: string
   className?: string
   style?: React.CSSProperties
   stylePerChar?: (index: number) => React.CSSProperties
   animationOptions?: FlickerAnimationOptions
 }
 
-export const FlickerText = ({ text, fontSize, letterSpacing, className, style, stylePerChar, animationOptions }: FlickerTextProps) => {
+export const FlickerText = ({ text, fontSize, charSpacing, className, style, stylePerChar, animationOptions }: FlickerTextProps) => {
   return (
     <>
       {text.split("").map((char, i) => (
         <FlickerChar
           key={`char-${i}-${char}`}
           fontSize={fontSize}
-          letterSpacing={letterSpacing}
+          charSpacing={charSpacing}
           className={className}
           style={{ ...style, ...stylePerChar?.(i) }}
           animationOptions={animationOptions}

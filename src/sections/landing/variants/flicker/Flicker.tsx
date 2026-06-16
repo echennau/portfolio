@@ -30,7 +30,7 @@ const Flicker = () => {
   )
 
   const fontSize = '19.5vw'
-  const letterSpacing = '-1.25vw'
+  const charSpacing = '-1.25vw'
 
   return (
     <div className="px-[4vw] w-full h-full flex flex-col justify-end">
@@ -45,7 +45,7 @@ const Flicker = () => {
             <FlickerText
               text={text}
               fontSize={fontSize}
-              letterSpacing={letterSpacing}
+              charSpacing={charSpacing}
               className="type-mono"
               style={CHAR_STYLE}
               stylePerChar={(i) => ({ ["--grad-angle" as string]: `${angles[i]}deg` })}
