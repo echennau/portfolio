@@ -2,7 +2,13 @@
 @import "@echennau/remi";
 @import "lenis/dist/lenis.css";
 
-  ::view-transition-old(root), ::view-transition-new(root) {
+  :root[data-magicui-theme-vt="active"]::view-transition-old(root),
+  :root[data-magicui-theme-vt="active"]::view-transition-new(root) {
     animation: none;
     mix-blend-mode: normal;
+    pointer-events: none;
+}
+
+  :root[data-magicui-theme-vt="active"]::view-transition-new(root) {
+    clip-path: var(--magicui-theme-vt-clip-from);
 }

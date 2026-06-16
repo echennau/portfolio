@@ -17,12 +17,6 @@ export default function Home() {
     <ReactLenis root>
       <NavBar />
       <main className="overflow-x-hidden">
-        <button
-          className="fixed z-50"
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        >
-          Toggle theme ({theme})
-        </button>
         <Landing />
         <About />
         <Projects />
