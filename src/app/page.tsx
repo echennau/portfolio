@@ -10,19 +10,17 @@ import NavBar from "../components/custom/NavBar";
 import { NavBarHoverProvider } from "../context/NavBarHoverContext";
 
 export default function Home() {
-  const { theme, setTheme } = useTheme();
-
   return (
     <NavBarHoverProvider>
-    <ReactLenis root>
-      <NavBar />
-      <main className="overflow-x-hidden">
-        <Landing />
-        <About />
-        <Projects />
-        <Contact />
-      </main>
-    </ReactLenis>
+      <ReactLenis root>
+        <NavBar />
+        <main className="overflow-x-hidden">
+          <Landing />
+          <About />
+          <Projects />
+          <Contact />
+        </main>
+      </ReactLenis>
     </NavBarHoverProvider>
   );
 }

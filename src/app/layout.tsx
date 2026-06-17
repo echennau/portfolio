@@ -1,35 +1,35 @@
-import type { Metadata } from "next"
-import localFont from "next/font/local"
-import "./globals.css"
-import { ThemeProvider } from '@teispace/next-themes';
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import "./globals.css";
+import { ThemeProvider } from "@teispace/next-themes";
 
 const spaceGrotesk = localFont({
   src: "../../node_modules/@echennau/remi/dist/fonts/SpaceGrotesk-VariableFont_wght.ttf",
   variable: "--font-space-grotesk",
   display: "swap",
-})
+});
 
 const montserrat = localFont({
   src: "../../node_modules/@echennau/remi/dist/fonts/Montserrat-VariableFont_wght.ttf",
   variable: "--font-montserrat",
   display: "swap",
-})
+});
 
 const sourceCodePro = localFont({
   src: "../../node_modules/@echennau/remi/dist/fonts/SourceCodePro-VariableFont_wght.ttf",
   variable: "--font-source-code-pro",
   display: "swap",
-})
+});
 
 export const metadata: Metadata = {
   title: "Ethan Chennault",
   description: "Ethan Chennault's Portfolio",
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html
@@ -43,5 +43,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

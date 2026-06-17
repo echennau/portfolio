@@ -1,17 +1,24 @@
-import { useRef } from "react"
-import { useFlickerAnimation, FlickerAnimationOptions } from "./useFlicker"
+import { useRef } from "react";
+import { useFlickerAnimation, FlickerAnimationOptions } from "./useFlicker";
 
 interface FlickerCharProps {
-  children: string
-  fontSize: string
-  charSpacing: string
-  className?: string
-  style?: React.CSSProperties
-  animationOptions?: FlickerAnimationOptions
+  children: string;
+  fontSize: string;
+  charSpacing: string;
+  className?: string;
+  style?: React.CSSProperties;
+  animationOptions?: FlickerAnimationOptions;
 }
-const FlickerChar = ({ children, fontSize, charSpacing, className, style, animationOptions }: FlickerCharProps) => {
-  const ref = useRef<HTMLSpanElement>(null)
-  useFlickerAnimation(ref, animationOptions)
+const FlickerChar = ({
+  children,
+  fontSize,
+  charSpacing,
+  className,
+  style,
+  animationOptions,
+}: FlickerCharProps) => {
+  const ref = useRef<HTMLSpanElement>(null);
+  useFlickerAnimation(ref, animationOptions);
 
   return (
     <span
@@ -29,20 +36,28 @@ const FlickerChar = ({ children, fontSize, charSpacing, className, style, animat
     >
       {children}
     </span>
-  )
-}
+  );
+};
 
 export interface FlickerTextProps {
-  text: string
-  fontSize: string
-  charSpacing: string
-  className?: string
-  style?: React.CSSProperties
-  stylePerChar?: (index: number) => React.CSSProperties
-  animationOptions?: FlickerAnimationOptions
+  text: string;
+  fontSize: string;
+  charSpacing: string;
+  className?: string;
+  style?: React.CSSProperties;
+  stylePerChar?: (index: number) => React.CSSProperties;
+  animationOptions?: FlickerAnimationOptions;
 }
 
-export const FlickerText = ({ text, fontSize, charSpacing, className, style, stylePerChar, animationOptions }: FlickerTextProps) => {
+export const FlickerText = ({
+  text,
+  fontSize,
+  charSpacing,
+  className,
+  style,
+  stylePerChar,
+  animationOptions,
+}: FlickerTextProps) => {
   return (
     <>
       {text.split("").map((char, i) => (
@@ -58,5 +73,5 @@ export const FlickerText = ({ text, fontSize, charSpacing, className, style, sty
         </FlickerChar>
       ))}
     </>
-  )
-}
+  );
+};

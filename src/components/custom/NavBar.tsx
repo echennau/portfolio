@@ -138,11 +138,17 @@ const NavBar = () => {
           "flex pt-4 pb-4 pointer-events-auto rounded-b-full",
           magnifyNav ? "px-10" : "px-2",
         )}
-        onMouseEnter={() => { setHovering(true); setHoverShrink(false); }}
-        onMouseLeave={() => { setHovering(false); setHoverShrink(true); }}
+        onMouseEnter={() => {
+          setHovering(true);
+          setHoverShrink(false);
+        }}
+        onMouseLeave={() => {
+          setHovering(false);
+          setHoverShrink(true);
+        }}
       >
         <motion.nav
-          animate={{ scale: !magnifyNav ? 0.5 : 1 }}
+          animate={{ scale: !magnifyNav ? 0.75 : 1 }}
           transition={{
             delay: !magnifyNav && hoverShrink ? NAVBAR_SHRINK_DELAY / 1000 : 0,
             type: "spring",

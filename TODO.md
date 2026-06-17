@@ -47,7 +47,6 @@ dark/light mode button https://magicui.design/docs/components/animated-theme-tog
 
 https://demos.gsap.com/demo/macos-dock-effect/ better dock better!
 
-
 # Layout
 
 lenis react https://www.lenis.dev/

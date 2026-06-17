@@ -1,15 +1,13 @@
-import clsx from "clsx"
-import React from "react"
-import { ComponentProps } from "react"
-import { motion } from "motion/react"
+import clsx from "clsx";
+import React from "react";
+import { motion, HTMLMotionProps } from "motion/react";
 
-type SectionProps = ComponentProps<"section">
+type SectionProps = HTMLMotionProps<"section">;
 /**
  * Custom semantic <section> layout component that makes sections sticky scroll.
  */
 export const Section = ({ className, children, ...props }: SectionProps) => {
   return (
-    // @ts-ignore
     <motion.section
       className={clsx("min-h-screen w-full sticky top-0", className)}
       initial={{ scale: 0.2, transform: "translateX(25%)" }}
@@ -22,5 +20,5 @@ export const Section = ({ className, children, ...props }: SectionProps) => {
     >
       <div className="absolute bottom-0 left-0 right-0 top-0">{children}</div>
     </motion.section>
-  )
-}
+  );
+};
