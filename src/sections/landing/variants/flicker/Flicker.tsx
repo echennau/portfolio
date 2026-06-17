@@ -1,4 +1,4 @@
-import { useEffect, useRef, useMemo } from "react";
+import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { FlickerText } from "./FlickerText";
 import { useNavBarHover } from "../../../../context/NavBarHoverContext";
@@ -17,15 +17,10 @@ const Flicker = () => {
   const { hoveredLabel } = useNavBarHover();
   const text = hoveredLabel ?? "echennau/";
 
-  const isInitial = useRef(true);
-  useEffect(() => {
-    isInitial.current = false;
-  }, []);
+  const [initial, setInitial] = useState(true)
+  const animationOptions = initial ? INITIAL_ANIMATION_OPTIONS : undefined;
 
-  // Child FlickerChar effects run before this parent effect, so isInitial.current
-  // is still true when the first render's chars animate — then flips to false.
-  const animationOptions = isInitial.current ? INITIAL_ANIMATION_OPTIONS : undefined;
-
+  // eslint-disable-next-line react-hooks/purity
   const angles = useMemo(() => text.split("").map(() => Math.random() * 360), [text]);
 
   const fontSize = "19.5vw";
@@ -39,7 +34,8 @@ const Flicker = () => {
             key={text}
             className="flex"
             initial={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 0.1 } }}
+            exit={{ opacity: 0, transition: { duration: 0.075 } }}
+            onAnimationComplete={() => setInitial(false)}
           >
             <FlickerText
               text={text}

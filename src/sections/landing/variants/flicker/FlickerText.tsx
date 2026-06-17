@@ -1,3 +1,5 @@
+// TODO: add commenting and documentation
+
 import { useRef } from "react";
 import { useFlickerAnimation, FlickerAnimationOptions } from "./useFlicker";
 
@@ -26,7 +28,7 @@ const FlickerChar = ({
       style={{
         fontSize,
         marginLeft: charSpacing,
-        charSpacing: 0,
+        letterSpacing: 0,
         lineHeight: 1,
         opacity: 0,
         ...style,

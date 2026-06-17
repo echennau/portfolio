@@ -86,5 +86,5 @@ export function useFlickerAnimation(
     });
 
     return () => anim.cancel();
-  }, [ref]); // options intentionally omitted — animation is fixed at mount time
+  }, [options?.duration, options?.maxStartDelay, ref]); // options intentionally omitted — animation is fixed at mount time
 }
