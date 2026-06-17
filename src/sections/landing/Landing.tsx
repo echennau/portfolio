@@ -3,6 +3,7 @@ import React from "react";
 import Flicker from "./variants/flicker/Flicker";
 import { useStatic } from "./variants/static/useStatic";
 import Laser from "./variants/laser/Laser";
+import { Section } from "@/components/layout/Section";
 
 interface LandingProps {
   variant?: "default";
@@ -16,7 +17,7 @@ const Landing = ({ variant = "default" }: LandingProps) => {
   const bg = useStatic();
 
   return (
-    <section className="w-full h-screen overflow-hidden bg-default flex flex-col justify-center items-center">
+    <Section className="w-full h-screen overflow-hidden p-0 bg-default flex flex-col justify-center items-center">
       {/* <div className="w-full h-full relative">
         <div className="w-full h-full bg-primary absolute" />
         <div
@@ -33,7 +34,7 @@ const Landing = ({ variant = "default" }: LandingProps) => {
         <Laser />
       </div>
       <Flicker />
-    </section>
+    </Section>
   );
 };
 

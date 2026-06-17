@@ -14,7 +14,7 @@ export default function Home() {
     <NavBarHoverProvider>
       <ReactLenis root>
         <NavBar />
-        <main className="overflow-x-hidden">
+        <main>
           <Landing />
           <About />
           <Projects />
