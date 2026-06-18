@@ -11,9 +11,9 @@ interface SectionProps extends Omit<HTMLMotionProps<"section">, "children"> {
 export const Section = ({ className, children, ...props }: SectionProps) => {
   return (
     <motion.section
-      className={cn("min-h-screen h-screen w-full sticky top-0 bg-red-300")}
-      // initial={{ scale: 0.2, transform: "translateX(25%)" }}
-      // whileInView={{ scale: 1, transform: "translateX(0)" }}
+      className={cn("min-h-screen h-screen w-full sticky top-0")}
+      // initial={{ scale: 0.2, }}
+      // whileInView={{ scale: 1, }}
       // transition={{
       //   duration: 1,
       //   delay: 0.1,

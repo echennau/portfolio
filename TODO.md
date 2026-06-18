@@ -30,7 +30,21 @@ https://threejs.org/docs/#AsciiEffect
 
 https://magicui.design/docs/components/progressive-blur
 
-# Project table with a hover card
+
+solution: add a progressive blur section between Landing and About page, such that the layered pinning scrolls it up to cover!
+
+# About Page
+
+Obviously need a picture! Below? Some sort of fancy animation... need to look thru react bits, framer motion, etc.
+
+Look thru other portfolio websites for a feel on how to do this
+
+Include: socials! link to general resume! about me! hobbies!
+
+
+# Project Page
+
+## Project table with a hover card
 
 https://www.vengenceui.com/components/cursor-card (modify somehow)
 
@@ -38,27 +52,17 @@ https://demos.gsap.com/demo/flexbox-filtering/ (project table filter)
 
 border shine for the cards? https://magicui.design/docs/components/shine-border
 
-# Standalone navbar
 
-https://www.vengenceui.com/components/spotlight-navbar (make larger)
-or https://www.vengenceui.com/components/glass-dock (use icons -> hover to show exactly what, good for mobile!)
-
-dark/light mode button https://magicui.design/docs/components/animated-theme-toggler
-
-https://demos.gsap.com/demo/macos-dock-effect/ better dock better!
-
-# Layout
-
-lenis react https://www.lenis.dev/
-
-https://demos.gsap.com/demo/infinite-looped-panels/ looped paneling
+## Layout
 
 Footer Bounce! for shiggles https://demos.gsap.com/demo/footer-bounce/
 
-Animate scroll position
-
-Animated layout changing (see framer motion)
+Animated layout changing (see framer motion) for when filtering projects by skill
 layout animation: https://motion.dev/docs/react-layout-animations
+
+# Contact Page
+
+regular old ass form
 
 # Other cool things
 
@@ -70,7 +74,6 @@ Morph Text: https://www.vengenceui.com/components/morph-text / https://magicui.d
 
 Trigger on scroll: https://demos.gsap.com/demo/trigger-on-scroll/
 
-## project prettier formatter
 
 ## if struggling with flash on load
 
